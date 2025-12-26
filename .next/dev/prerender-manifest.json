@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "d80bd12d6e45a3083f97807df769a7ec",
-    "previewModeSigningKey": "de9309949eded652dd7de1749883f3c12f95411d7978352b0c668eb02c9a76fa",
-    "previewModeEncryptionKey": "1de60ca951623d881bde02fc55d0dc824af57f53eb2f0b80126b783b4544369d"
-  }
-}
+{"version":4,"routes":{"/programs/entrepreneur-council":{},"/programs/mentorship":{},"/programs/local-action-teams":{},"/programs/board-members":{}},"dynamicRoutes":{"/programs/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/programs/[slug]","routeRegex":"^\\/programs\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"41af4a2754a653ac2431d0ab399317fb","previewModeSigningKey":"b7b21178ab3276d1fccb1fb4466d3d12cd4096134ad32d6b80fa1a09ed370e8e","previewModeEncryptionKey":"3af85d679bd9b509aa1aff02edf52902aa7760ed156f6860bc6082a391099879"}}

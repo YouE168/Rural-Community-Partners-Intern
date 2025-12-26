@@ -13,16 +13,14 @@ import { Users, Briefcase, MapPin } from "lucide-react";
 
 const programs = [
   {
-    icon: Briefcase,
     slug: "entrepreneur-council",
-    title: "Entrepreneur Council",
+    title: "Small Business & Entrepreneur Council",
     description:
       "A peer-led group of successful entrepreneurs providing guidance and support",
     details:
       "Monthly meetings, business networking, peer mentorship, and collaborative problem-solving",
   },
   {
-    icon: Users,
     slug: "mentorship",
     title: "Mentorship Program",
     description:
@@ -37,6 +35,15 @@ const programs = [
     description: "Community-based teams driving local economic development",
     details:
       "Community projects, local partnerships, asset-based development, and sustained impact",
+  },
+
+  {
+    slug: "board-members",
+    title: "Board Members",
+    description:
+      "Leadership guiding Rural Community Partners' strategic vision",
+    details:
+      "Strategic governance, organizational oversight, and commitment to rural community development",
   },
 ];
 
@@ -70,9 +77,6 @@ export default function ProgramsPage() {
                   className="overflow-hidden hover:shadow-lg transition-shadow flex flex-col"
                 >
                   <CardHeader className="bg-primary/5">
-                    <div className="mb-4 p-3 w-fit bg-primary/10 rounded-lg">
-                      <Icon className="h-6 w-6 text-primary" />
-                    </div>
                     <CardTitle className="text-foreground">
                       {program.title}
                     </CardTitle>

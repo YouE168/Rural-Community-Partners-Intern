@@ -155,4 +155,21 @@
   h3 {
     @apply text-2xl sm:text-3xl;
   }
+  /* Council member portrait adjustments */
+  .council-member-photo {
+    object-position: center 35% !important;
+  }
+  
+  /* Specific adjustments for individual members if needed */
+  .council-member-photo[alt="Heather Horton"] {
+    object-position: center 25% !important;
+  }
+  
+  .council-member-photo[alt="Blanca"] {
+    object-position: center 30% !important;
+  }
+  
+  .council-member-photo[alt="Nancy Brown"] {
+    object-position: center 28% !important;
+  }
 }
