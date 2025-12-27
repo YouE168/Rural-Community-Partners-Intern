@@ -49,39 +49,6 @@ const successStories = [
     image:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
   },
-  {
-    id: 4,
-    title: "Tech Startup Acceleration",
-    excerpt: "Rural entrepreneur launches successful software company",
-    fullStory:
-      "A local programmer had an innovative idea but faced challenges scaling. Our mentorship connected him with successful entrepreneurs and investors. With strategic guidance and network support, he secured seed funding and grew his software company from an idea to a thriving business with 8 employees.",
-    impact: "$500K+ funding raised",
-    region: "Chase County",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
-  },
-  {
-    id: 5,
-    title: "Retail Business Turnaround",
-    excerpt: "Struggling store becomes profitable through business improvement",
-    fullStory:
-      "A family-owned retail business was losing market share to big box competitors. Our technical assistance focused on enhancing customer experience, improving operations, and developing an e-commerce presence. Within 18 months, the business stabilized, grew revenues by 25%, and expanded its workforce.",
-    impact: "25% revenue growth",
-    region: "Greenwood County",
-    image:
-      "https://images.unsplash.com/photo-1441984904556-0ac8e9a00ec7?w=500&h=300&fit=crop",
-  },
-  {
-    id: 6,
-    title: "Rural Tourism Initiative",
-    excerpt: "Developing agritourism brings visitors and revenue to rural area",
-    fullStory:
-      "Several farms wanted to diversify income through agritourism but lacked business expertise. Our feasibility study identified strong market potential, and our technical assistance helped them develop a coordinated tourism experience. This year alone, they welcomed over 5,000 visitors and generated $300,000 in revenue.",
-    impact: "5,000 visitors, $300K revenue",
-    region: "Morris County",
-    image:
-      "https://images.unsplash.com/photo-1549452778-3c46e6d0dd53?w=500&h=300&fit=crop",
-  },
 ];
 
 export default function ImpactPage() {
