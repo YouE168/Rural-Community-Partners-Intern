@@ -53,8 +53,20 @@ export default function ProgramsPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="w-full py-12 sm:py-16 md:py-20 bg-gradient-to-b from-primary/5 to-background">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      <section className="w-full py-12 sm:py-16 md:py-20 bg-gradient-to-b from-primary/5 to-background relative">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          {/*CHANGE TO THE RIGHT IMAGE */}
+          <img
+            src="/your-image.jpg"
+            alt=""
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/95" />
+        </div>
+
+        {/* Content */}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-4 text-balance">
             Special Initiatives
           </h1>

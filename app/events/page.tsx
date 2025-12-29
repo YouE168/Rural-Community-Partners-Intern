@@ -11,31 +11,19 @@ import { useState } from "react";
 const allEvents = [
   {
     id: 1,
-    title: "Entrepreneur Kickoff Workshop",
-    description:
-      "Learn essential skills to start your business journey with guidance from experienced entrepreneurs.",
-    date: "December 15, 2025",
-    time: "10:00 AM - 12:00 PM",
-    location: "Kansas City, KS",
+    title: "Coming Soon",
+    description: "Description",
+    date: "Date",
+    time: "Time",
+    location: "Location",
     type: "Workshop",
     attendees: 25,
     registrationUrl: "#register",
   },
+
   {
     id: 2,
-    title: "Mentorship Matching Event",
-    description:
-      "Connect with experienced mentors in your industry and begin a transformative mentoring relationship.",
-    date: "December 22, 2025",
-    time: "2:00 PM - 4:00 PM",
-    location: "Virtual",
-    type: "Networking",
-    attendees: 40,
-    registrationUrl: "#register",
-  },
-  {
-    id: 3,
-    title: "Regional Leadership Summit",
+    title: "Example: Regional Leadership Summit",
     description:
       "Network with community leaders and innovators from across Southeast Kansas for a full day of learning.",
     date: "January 10, 2026",
@@ -45,65 +33,22 @@ const allEvents = [
     attendees: 100,
     registrationUrl: "#register",
   },
-  {
-    id: 4,
-    title: "Financial Planning for Startups",
-    description:
-      "Master financial planning, budgeting, and funding strategies for your new business.",
-    date: "January 24, 2026",
-    time: "1:00 PM - 3:00 PM",
-    location: "Virtual",
-    type: "Workshop",
-    attendees: 30,
-    registrationUrl: "#register",
-  },
-  {
-    id: 5,
-    title: "Marketing Strategies for Rural Businesses",
-    description:
-      "Discover effective marketing techniques tailored for rural markets and limited budgets.",
-    date: "February 7, 2026",
-    time: "10:00 AM - 12:00 PM",
-    location: "Emporia, KS",
-    type: "Workshop",
-    attendees: 35,
-    registrationUrl: "#register",
-  },
-  {
-    id: 6,
-    title: "Community Development Summit",
-    description:
-      "Share best practices and collaborate on community economic development initiatives.",
-    date: "February 21, 2026",
-    time: "9:00 AM - 4:00 PM",
-    location: "Marion, KS",
-    type: "Summit",
-    attendees: 60,
-    registrationUrl: "#register",
-  },
 ];
 
 const pastEvents = [
   {
     id: 101,
-    title: "Q3 Entrepreneur Networking Event",
+    title: "Example: Entrepreneur Networking Event",
     date: "September 15, 2024",
     location: "Topeka, KS",
     attendees: 45,
   },
   {
     id: 102,
-    title: "Agricultural Innovation Workshop",
-    date: "August 28, 2024",
-    location: "Virtual",
+    title: "Title",
+    date: "Date",
+    location: "Location",
     attendees: 32,
-  },
-  {
-    id: 103,
-    title: "Small Business Tax Planning Session",
-    date: "July 10, 2024",
-    location: "Multiple Locations",
-    attendees: 28,
   },
 ];
 

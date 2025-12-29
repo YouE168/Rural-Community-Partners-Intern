@@ -1,17 +1,48 @@
 import Link from "next/link";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="w-full bg-foreground text-primary-foreground py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-20 mb-12">
           {/* Brand */}
           <div>
             <h3 className="font-bold text-lg mb-4">Rural Community Partners</h3>
-            <p className="text-sm text-primary-foreground/80">
+            <p className="text-sm text-primary-foreground/80 mb-4">
               Empowering rural communities and entrepreneurs in Southeast Kansas
               through support, mentorship, and collaboration.
             </p>
+            {/* Social Media Links */}
+            <div className="flex gap-4">
+              <Link
+                href="https://www.facebook.com/profile.php?id=61554600895581"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-secondary transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" />
+              </Link>
+              <Link
+                href="https://www.instagram.com/ruralcommunitypartners/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-secondary transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/ruralcommunitypartners/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-secondary transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </Link>
+            </div>
           </div>
 
           {/* Services */}

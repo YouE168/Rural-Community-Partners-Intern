@@ -584,6 +584,10 @@
     left: calc(var(--spacing) * 2);
   }
 
+  .z-0 {
+    z-index: 0;
+  }
+
   .z-10 {
     z-index: 10;
   }
@@ -1024,6 +1028,10 @@
 
   .gap-12 {
     gap: calc(var(--spacing) * 12);
+  }
+
+  .gap-20 {
+    gap: calc(var(--spacing) * 20);
   }
 
   :where(.space-y-1\.5 > :not(:last-child)) {
@@ -1551,6 +1559,20 @@
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 
+  .from-background\/80 {
+    --tw-gradient-from: var(--background);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .from-background\/80 {
+      --tw-gradient-from: color-mix(in oklab, var(--background) 80%, transparent);
+    }
+  }
+
+  .from-background\/80 {
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+
   .from-blue-500 {
     --tw-gradient-from: var(--color-blue-500);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -1867,6 +1889,20 @@
 
   .to-background {
     --tw-gradient-to: var(--background);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+
+  .to-background\/95 {
+    --tw-gradient-to: var(--background);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .to-background\/95 {
+      --tw-gradient-to: color-mix(in oklab, var(--background) 95%, transparent);
+    }
+  }
+
+  .to-background\/95 {
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 
@@ -2372,6 +2408,10 @@
 
   .opacity-0 {
     opacity: 0;
+  }
+
+  .opacity-20 {
+    opacity: .2;
   }
 
   .opacity-50 {

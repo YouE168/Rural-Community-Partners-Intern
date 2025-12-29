@@ -152,7 +152,7 @@ export default function ContactPage() {
                   <p className="text-sm text-muted-foreground mb-4">
                     Monday - Friday
                     <br />
-                    9:00 AM - 5:00 PM
+                    8:00 AM - 5:00 PM
                   </p>
                   <Button
                     asChild
@@ -161,11 +161,11 @@ export default function ContactPage() {
                     className="w-full"
                   >
                     <a
-                      href="tel:+15555551234"
+                      href="tel:+16202152892"
                       className="flex items-center justify-center gap-2"
                     >
                       <Phone className="h-4 w-4" />
-                      Call (555) 555-1234
+                      Call (620) 215-2892
                     </a>
                   </Button>
                 </div>
@@ -193,7 +193,7 @@ export default function ContactPage() {
                     className="w-full"
                   >
                     <a
-                      href="mailto:info@ruralcommunitypartners.org"
+                      href="mailto:jody@hbcat.org"
                       className="flex items-center justify-center gap-2"
                     >
                       <Mail className="h-4 w-4" />

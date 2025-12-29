@@ -18,10 +18,10 @@ const impactStats = [
 const successStories = [
   {
     id: 1,
-    title: "Sarah's Artisan Bakery Success",
+    title: "EXAMPLE: Sarah's Bakery Success",
     excerpt: "From home-based idea to thriving business with 5 employees",
     fullStory:
-      "Sarah had a passion for baking but no business experience. Through our mentorship program and technical assistance, she developed a comprehensive business plan, secured financing, and launched her artisan bakery. Today, her business generates over $150,000 in annual revenue and employs 5 local residents.",
+      "Sarah had a passion for baking but no business experience. Through our mentorship program and technical assistance, she developed a comprehensive business plan and launched her artisan bakery. Today, her business generates over $150,000 in annual revenue and employs 5 local residents.",
     impact: "$150K+ annual revenue",
     region: "Lyon County",
     image:
@@ -29,23 +29,11 @@ const successStories = [
   },
   {
     id: 2,
-    title: "Agricultural Innovation Adoption",
-    excerpt: "Sustainable farming increases yields while reducing costs",
-    fullStory:
-      "A family farm was struggling with rising input costs. Our technical assistance helped them implement sustainable farming practices and precision agriculture technology. Within two years, they reduced input costs by 40% while increasing yields, making their operation more profitable and environmentally sustainable.",
-    impact: "40% cost reduction",
-    region: "Butler County",
-    image:
-      "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=500&h=300&fit=crop",
-  },
-  {
-    id: 3,
-    title: "Community Revitalization Project",
-    excerpt: "Small town attracts new businesses and retains residents",
-    fullStory:
-      "A rural town used our community development services to create a comprehensive economic development strategy. Through coordinated effort, they attracted 3 new businesses, supported the expansion of 2 existing companies, and created 50 new jobs. The community is now experiencing renewed growth and resident confidence.",
-    impact: "50 new jobs created",
-    region: "Marion County",
+    title: "Title",
+    excerpt: "Excerpt",
+    fullStory: "Story",
+    impact: "Impact",
+    region: "region",
     image:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
   },
@@ -76,24 +64,17 @@ export default function ImpactPage() {
         setSubstackPosts([
           {
             id: 1,
-            title: "Supporting Rural Entrepreneurs: Key Insights from 2024",
-            subtitle: "Lessons learned from working with 150+ entrepreneurs",
+            title: "Example: The Future of Rural Economic Development",
+            subtitle: "Trends and opportunities for Southeast Kansas",
             url: "https://ruralcommunitypartners.substack.com",
             post_date: "2024-12-01",
           },
           {
             id: 2,
-            title: "The Future of Rural Economic Development",
-            subtitle: "Trends and opportunities for Southeast Kansas",
+            title: "Tilte",
+            subtitle: "Sub-Tittle",
             url: "https://ruralcommunitypartners.substack.com",
-            post_date: "2024-11-24",
-          },
-          {
-            id: 3,
-            title: "Mentor Spotlight: Building Businesses in Rural Areas",
-            subtitle: "Meet one of our experienced mentors",
-            url: "https://ruralcommunitypartners.substack.com",
-            post_date: "2024-11-17",
+            post_date: "Post Date",
           },
         ]);
       } finally {
