@@ -338,7 +338,7 @@ const programDetails: {
         name: "Darrell Pulliam",
         business: "Board Member",
         icon: "👤",
-        image: "/placeholder-darrell.jpg",
+        image: "/DarrellPulliam-headshot.jpg",
       },
       {
         name: "Christina Pacheco",
