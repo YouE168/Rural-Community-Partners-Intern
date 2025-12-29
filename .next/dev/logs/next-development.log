@@ -1,39 +1,22 @@
-[00:00:00.541] Server  LOG      ✓ Ready in 370ms
-[00:00:05.203] Server  WARN    Image with src "/rural-community-entrepreneurs-working-together-in-.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+[00:00:00.596] Server  LOG      ✓ Ready in 421ms
+[00:00:05.066] Server  WARN    Image with src "/rural-community-entrepreneurs-working-together-in-.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[00:00:05.255] Server  WARN     ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
-[00:00:05.619] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:06.253] Browser WARN    Image with src "/rural-community-entrepreneurs-working-together-in-.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+[00:00:05.116] Server  WARN     ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
+[00:00:05.480] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:05.604] Browser WARN    Image with src "/rural-community-entrepreneurs-working-together-in-.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[00:00:06.253] Browser WARN    Image with src "/rural-community-entrepreneurs-working-together-in-.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:06.253] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:06.253] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:06.253] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766982000138}
-[00:00:15.594] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/programs color: rgb(120, 120, 120) color: inherit {"dp":"/programs","o":"http://localhost:3000/programs","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766982009966}
-[00:00:17.667] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/programs/board-members color: rgb(120, 120, 120) color: inherit {"dp":"/programs/[slug]","o":"http://localhost:3000/programs/board-members","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766982012039}
-[00:04:59.526] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:59.654] Browser WARN    Image with src "/rural-community-entrepreneurs-working-together-in-.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[00:04:59.654] Browser WARN    Image with src "/rural-community-entrepreneurs-working-together-in-.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:04:59.654] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:04:59.654] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:04:59.654] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766982294028}
-[00:05:05.418] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/programs color: rgb(120, 120, 120) color: inherit {"dp":"/programs","o":"http://localhost:3000/programs","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766982299792}
-[00:05:11.111] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/programs/board-members color: rgb(120, 120, 120) color: inherit {"dp":"/programs/[slug]","o":"http://localhost:3000/programs/board-members","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766982305484}
-[00:07:01.445] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:07:01.564] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:07:01.565] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:07:01.565] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/programs/board-members","route":"/programs/[slug]"}
-[00:07:01.565] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/programs/board-members color: rgb(120, 120, 120) color: inherit {"dp":"/programs/[slug]","o":"http://localhost:3000/programs/board-members","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766982415940}
-[00:07:45.687] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/programs color: rgb(120, 120, 120) color: inherit {"dp":"/programs","o":"http://localhost:3000/programs","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766982460061}
-[00:07:48.217] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/programs/local-action-teams color: rgb(120, 120, 120) color: inherit {"dp":"/programs/[slug]","o":"http://localhost:3000/programs/local-action-teams","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766982462591}
-[00:13:12.866] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:13:13.020] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:13:13.020] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/programs/local-action-teams","route":"/programs/[slug]"}
-[00:13:13.020] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/programs/local-action-teams color: rgb(120, 120, 120) color: inherit {"dp":"/programs/[slug]","o":"http://localhost:3000/programs/local-action-teams","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766982787397}
-[00:14:37.124] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:14:37.271] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:14:37.271] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/programs/local-action-teams","route":"/programs/[slug]"}
-[00:14:37.271] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/programs/local-action-teams color: rgb(120, 120, 120) color: inherit {"dp":"/programs/[slug]","o":"http://localhost:3000/programs/local-action-teams","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766982871648}
-[00:15:39.350] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/programs color: rgb(120, 120, 120) color: inherit {"dp":"/programs","o":"http://localhost:3000/programs","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766982933724}
-[00:15:44.001] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/programs/board-members color: rgb(120, 120, 120) color: inherit {"dp":"/programs/[slug]","o":"http://localhost:3000/programs/board-members","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766982938376}
+[00:00:05.604] Browser WARN    Image with src "/logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:05.604] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:05.604] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:05.604] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767010105955}
+[00:00:06.993] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/programs color: rgb(120, 120, 120) color: inherit {"dp":"/programs","o":"http://localhost:3000/programs","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767010107343}
+[00:00:09.552] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/programs/board-members color: rgb(120, 120, 120) color: inherit {"dp":"/programs/[slug]","o":"http://localhost:3000/programs/board-members","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767010109903}
+[00:02:01.573] Server  LOG        Reload env: .env.local
+[00:02:01.662] Server  LOG      ✓ Compiled in 28ms
+[00:02:01.665] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:02:02.065] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:03.171] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:03.171] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/programs/board-members","route":"/programs/[slug]"}
+[00:02:03.171] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/programs/board-members color: rgb(120, 120, 120) color: inherit {"dp":"/programs/[slug]","o":"http://localhost:3000/programs/board-members","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767010222560}
+[00:02:07.518] Server  LOG        Reload env: .env.local
+[00:02:07.573] Server  LOG      ✓ Compiled in 13ms
