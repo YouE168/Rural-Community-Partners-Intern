@@ -52,22 +52,9 @@ export default function ProgramsPage() {
     <main className="min-h-screen">
       <Header />
 
-      {/* Hero Section with Background Image */}
-      <section className="relative w-full min-h-[60vh] py-20 overflow-hidden">
-        {/* Background Image using Next.js Image */}
-        <Image
-          src="/ProgramBackGround.jpg"
-          alt="Programs background"
-          fill
-          className="object-cover object-[center_5%]"
-          priority
-        />
-
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
-
-        {/* Content */}
-        <div className="relative z-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      {/* Hero Section */}
+      <section className="w-full py-12 sm:py-16 md:py-20 bg-gradient-to-r from-primary via-accent to-secondary">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 text-balance drop-shadow-lg">
             Special Initiatives
           </h1>
