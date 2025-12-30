@@ -90,41 +90,15 @@ export default function ImpactPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="w-full py-12 sm:py-16 md:py-20 bg-gradient-to-b from-primary/5 to-background">
+      <section className="w-full py-12 sm:py-16 md:py-20 bg-gradient-to-r from-primary via-accent to-secondary">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-4 text-balance">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 text-balance drop-shadow-lg">
             Our Impact & Stories
           </h1>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-white/95 max-w-2xl mx-auto drop-shadow-md">
             Real stories of entrepreneurs, communities, and economic
             transformation in Southeast Kansas
           </p>
-        </div>
-      </section>
-
-      {/* Impact Stats */}
-      <section className="w-full py-16 sm:py-20 md:py-24 bg-primary/5">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-            {impactStats.map((stat, idx) => {
-              const Icon = stat.icon;
-              return (
-                <Card key={idx} className="text-center">
-                  <CardContent className="pt-6">
-                    <div className="flex justify-center mb-4">
-                      <Icon className="h-8 w-8 text-primary" />
-                    </div>
-                    <p className="text-3xl sm:text-4xl font-bold text-primary mb-2">
-                      {stat.value}
-                    </p>
-                    <p className="text-xs sm:text-sm text-muted-foreground font-medium">
-                      {stat.label}
-                    </p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
         </div>
       </section>
 

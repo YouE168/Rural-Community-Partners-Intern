@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Users, Briefcase, MapPin } from "lucide-react";
+import Image from "next/image";
 
 const programs = [
   {
@@ -36,7 +37,6 @@ const programs = [
     details:
       "Community projects, local partnerships, asset-based development, and sustained impact",
   },
-
   {
     slug: "board-members",
     title: "Board Members",
@@ -52,25 +52,26 @@ export default function ProgramsPage() {
     <main className="min-h-screen">
       <Header />
 
-      {/* Hero Section */}
-      <section className="w-full py-12 sm:py-16 md:py-20 bg-gradient-to-b from-primary/5 to-background relative">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          {/*CHANGE TO THE RIGHT IMAGE */}
-          <img
-            src="/your-image.jpg"
-            alt=""
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/95" />
-        </div>
+      {/* Hero Section with Background Image */}
+      <section className="relative w-full min-h-[60vh] py-20 overflow-hidden">
+        {/* Background Image using Next.js Image */}
+        <Image
+          src="/ProgramBackGround.jpg"
+          alt="Programs background"
+          fill
+          className="object-cover object-[center_5%]"
+          priority
+        />
+
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
 
         {/* Content */}
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-4 text-balance">
+        <div className="relative z-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 text-balance drop-shadow-lg">
             Special Initiatives
           </h1>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-white/95 max-w-2xl mx-auto drop-shadow-md">
             Specialized programs designed to create lasting impact in rural
             Southeast Kansas
           </p>
@@ -80,7 +81,7 @@ export default function ProgramsPage() {
       {/* Programs Grid */}
       <section className="w-full py-16 sm:py-20 md:py-24 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {programs.map((program) => {
               const Icon = program.icon;
               return (

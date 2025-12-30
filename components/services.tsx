@@ -80,7 +80,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 [&>*:nth-last-child(-n+2):nth-child(3n+1)]:md:col-start-2 [&>*:nth-last-child(-n+2):nth-child(3n+1)]:lg:col-start-auto">
           {services.map((service) => {
             const Icon = service.icon;
             return (

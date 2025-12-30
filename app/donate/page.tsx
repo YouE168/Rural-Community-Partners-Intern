@@ -2,61 +2,74 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Heart, TrendingUp, Users, Zap } from "lucide-react";
+import {
+  Heart,
+  TrendingUp,
+  Users,
+  Zap,
+  ArrowRight,
+  Building2,
+  Handshake,
+} from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+
+const DONATION_URL =
+  "https://southeastkansas.fcsuite.com/erp/donate/create/fund?funit_id=3112";
 
 const donationLevels = [
   {
-    amount: "$25",
-    name: "Supporter",
-    description: "Help launch a new entrepreneur",
-    impact:
-      "Covers the cost of essential business tools and resources for one startup",
-    icon: Zap,
+    amount: "$50",
+    name: "Ecosystem Builder",
+    impact: "Support foundational resources for emerging entrepreneurs",
+    icon: Building2,
   },
   {
     amount: "$100",
-    name: "Champion",
-    description: "Support mentorship connections",
-    impact: "Enables 5 hours of expert mentorship for an aspiring entrepreneur",
+    name: "Opportunity Connector",
+    impact: "Enable mentorship connections and networking opportunities",
     icon: Users,
   },
   {
-    amount: "$500",
-    name: "Catalyst",
-    description: "Fund feasibility research",
-    impact:
-      "Funds a complete feasibility study for a community project or business initiative",
+    amount: "$250",
+    name: "Small Business Champion",
+    impact: "Fund essential business development tools and training",
     icon: TrendingUp,
   },
   {
-    amount: "$2,500+",
-    name: "Partner",
-    description: "Transform a region",
-    impact:
-      "Supports comprehensive regional development and multi-year initiatives",
+    amount: "$500",
+    name: "Rural Innovation Partner",
+    impact: "Support comprehensive feasibility studies and strategic planning",
+    icon: Handshake,
+  },
+  {
+    amount: "$1,000+",
+    name: "Legacy Investor",
+    impact: "Enable transformative multi-year regional initiatives",
     icon: Heart,
   },
 ];
 
-const impactStories = [
+const impactStats = [
   {
-    title: "Sarah's Bakery Success",
-    description:
-      "With mentorship and feasibility support, Sarah launched her artisan bakery and now employs 5 people in her rural community.",
-    result: "$150K+ annual revenue",
+    number: "200+",
+    label: "Small Businesses Supported",
+    icon: Users,
   },
   {
-    title: "Agricultural Tech Innovation",
-    description:
-      "A farmer used our technical assistance to implement sustainable farming practices, increasing yields while reducing costs.",
-    result: "40% cost reduction",
+    number: "$3.3M",
+    label: "New Capital Investment",
+    icon: TrendingUp,
   },
   {
-    title: "Community Revitalization",
-    description:
-      "A small town used our community development services to attract 3 new businesses and retain residents.",
-    result: "50 new jobs created",
+    number: "$200K+",
+    label: "Micro-Grants Provided",
+    icon: Heart,
+  },
+  {
+    number: "50+",
+    label: "New Jobs Created",
+    icon: Zap,
   },
 ];
 
@@ -65,16 +78,42 @@ export default function DonatePage() {
     <main className="min-h-screen">
       <Header />
 
-      {/* Hero Section */}
-      <section className="w-full py-12 sm:py-16 md:py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-4 text-balance">
-            Support Rural Opportunity
+      {/* Hero Section with CTA */}
+      <section className="relative w-full py-16 sm:py-24 md:py-32 overflow-hidden">
+        <Image
+          src="/GroupPicture-Donate-background.jpg"
+          alt="Donate background"
+          fill
+          className="object-cover object-[center_30%]"
+          priority
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
+
+        <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+            Invest in Rural Opportunity
           </h1>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
-            Your donation directly empowers entrepreneurs, strengthens
-            communities, and creates lasting economic opportunity in Southeast
-            Kansas.
+          <p className="text-xl sm:text-2xl text-white/95 mb-8 max-w-3xl mx-auto drop-shadow-md">
+            Every dollar empowers entrepreneurs and creates lasting economic
+            growth in Southeast Kansas
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <Button
+              size="lg"
+              asChild
+              className="text-lg px-8 py-6 w-full sm:w-auto"
+            >
+              <a href={DONATION_URL} target="_blank" rel="noopener noreferrer">
+                Donate Now <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            </Button>
+          </div>
+
+          <p className="text-sm text-white/90 drop-shadow">
+            <span className="font-semibold">Tax-Deductible</span> • Secure
+            Payment via Community Foundation of SEK
           </p>
         </div>
       </section>
@@ -84,27 +123,29 @@ export default function DonatePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-foreground">
             <span className="font-semibold">
-              Rural Community Partners is a 501(c)(3) nonprofit.
+              Your donation is tax-deductible.
             </span>{" "}
-            Your donation is tax-deductible to the fullest extent allowed by
-            law.
+            Donations are processed through the Community Foundation of
+            Southeast Kansas (501(c)(3)). Rural Community Partners operates with
+            HBCAT and CFSEK as fiscal agents.
           </p>
         </div>
       </section>
 
-      {/* Donation Levels */}
+      {/* Donation Support Levels */}
       <section className="w-full py-16 sm:py-20 md:py-24 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Ways to Give
+              Donation Support Levels
             </h2>
             <p className="text-lg text-muted-foreground">
-              Every contribution, no matter the size, makes a real difference
+              Choose a giving level that matches your commitment to rural
+              development
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12">
             {donationLevels.map((level) => {
               const Icon = level.icon;
               return (
@@ -127,15 +168,16 @@ export default function DonatePage() {
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col">
                     <p className="text-sm text-muted-foreground mb-4 flex-1">
-                      {level.description}
+                      {level.impact}
                     </p>
-                    <div className="bg-primary/5 p-4 rounded-lg mb-4">
-                      <p className="text-sm font-medium text-foreground">
-                        {level.impact}
-                      </p>
-                    </div>
                     <Button asChild className="w-full">
-                      <a href="#donate-form">{`Donate ${level.amount}`}</a>
+                      <a
+                        href={DONATION_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Donate {level.amount}
+                      </a>
                     </Button>
                   </CardContent>
                 </Card>
@@ -145,176 +187,108 @@ export default function DonatePage() {
         </div>
       </section>
 
-      {/* Impact Stories */}
-      <section className="w-full py-16 sm:py-20 md:py-24 bg-primary/5">
+      {/* Impact Stats */}
+      <section className="w-full py-16 bg-primary/5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Your Impact in Action
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              See how donations are transforming lives and communities
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {impactStories.map((story, idx) => (
-              <Card key={idx}>
-                <CardHeader>
-                  <CardTitle className="text-foreground">
-                    {story.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground">{story.description}</p>
-                  <div className="bg-primary/10 p-4 rounded-lg">
-                    <p className="text-sm font-semibold text-primary">
-                      {story.result}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Donation Form Section */}
-      <section
-        id="donate-form"
-        className="w-full py-16 sm:py-20 md:py-24 bg-background"
-      >
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Make Your Donation
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Choose how you'd like to support Rural Community Partners
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* One-Time Donation */}
-            <Card>
-              <CardHeader className="bg-primary/5">
-                <CardTitle className="text-foreground">
-                  One-Time Donation
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="pt-6 space-y-4">
-                <p className="text-muted-foreground">
-                  Make an immediate impact with a single contribution. You can
-                  choose any amount.
-                </p>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Amount</label>
-                  <input
-                    type="number"
-                    placeholder="Enter amount"
-                    className="w-full px-4 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                    min="1"
-                  />
-                </div>
-                <Button className="w-full">Donate Now</Button>
-              </CardContent>
-            </Card>
-
-            {/* Monthly Giving */}
-            <Card>
-              <CardHeader className="bg-secondary/5">
-                <CardTitle className="text-foreground">
-                  Monthly Giving
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="pt-6 space-y-4">
-                <p className="text-muted-foreground">
-                  Make a consistent impact with a monthly recurring donation.
-                  Cancel anytime.
-                </p>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Monthly Amount</label>
-                  <input
-                    type="number"
-                    placeholder="Enter amount"
-                    className="w-full px-4 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-secondary"
-                    min="1"
-                  />
-                </div>
-                <Button variant="secondary" className="w-full">
-                  Start Monthly Giving
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Donation Processing Note */}
-          <div className="mt-8 p-6 bg-muted/30 rounded-lg border border-border">
-            <p className="text-sm text-muted-foreground">
-              <span className="font-semibold">Note:</span> Donations are
-              currently processed through our secure partner portal. You'll be
-              redirected to complete your donation securely. We accept all major
-              credit cards and can arrange alternative payment methods upon
-              request.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="w-full py-16 sm:py-20 md:py-24 bg-primary/5">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
-            Frequently Asked Questions
+          <h2 className="text-3xl font-bold text-center text-foreground mb-12">
+            Our Impact
           </h2>
-          <div className="space-y-6">
-            {[
-              {
-                q: "Is my donation tax-deductible?",
-                a: "Yes! Rural Community Partners is a registered 501(c)(3) nonprofit organization. Your donation is tax-deductible to the fullest extent allowed by law. We'll send you a receipt for your records.",
-              },
-              {
-                q: "How is my donation used?",
-                a: "We allocate funds across program areas: mentorship support, feasibility studies, technical assistance, and community development initiatives. Check our annual impact report for detailed breakdowns.",
-              },
-              {
-                q: "Can I make a donation in memory or honor of someone?",
-                a: "We'd be honored to recognize your gift. Please contact us at [email] to arrange a memorial or honorific donation.",
-              },
-              {
-                q: "Do you accept donations of stock or property?",
-                a: "Yes, we accept a variety of donation types including stock transfers and in-kind contributions. Please contact our team to discuss options that work best for you.",
-              },
-              {
-                q: "Can I suggest how my donation is used?",
-                a: "We welcome donor input! Many of our donors recommend specific programs or initiatives. We'll discuss how your donation can best support your interests.",
-              },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-background p-6 rounded-lg border border-border"
-              >
-                <h3 className="font-semibold text-foreground mb-2">{item.q}</h3>
-                <p className="text-muted-foreground">{item.a}</p>
-              </div>
-            ))}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {impactStats.map((stat, idx) => {
+              const Icon = stat.icon;
+              return (
+                <Card key={idx} className="text-center">
+                  <CardContent className="pt-6">
+                    <div className="mx-auto mb-4 p-3 w-fit bg-primary/10 rounded-full">
+                      <Icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="text-3xl font-bold text-primary mb-2">
+                      {stat.number}
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      {stat.label}
+                    </p>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="w-full py-16 sm:py-20 md:py-24 bg-gradient-to-r from-primary to-accent">
+      {/* Success Stories */}
+      <section className="w-full py-16 bg-background">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-foreground mb-12">
+            Real Stories, Real Impact
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">
+                  Example: Sarah's Bakery
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Launched artisan bakery, now employs 5 people in rural
+                  community
+                </p>
+                <div className="text-primary font-semibold">
+                  $150K+ annual revenue
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Comming Soon</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">N/A</p>
+                <div className="text-primary font-semibold">N/A</div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Comming Soon</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">N/A</p>
+                <div className="text-primary font-semibold">N/A</div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="w-full py-20 bg-gradient-to-r from-primary to-accent">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">
-            Have Questions About Giving?
+            Ready to Make a Difference?
           </h2>
           <p className="text-lg text-primary-foreground/90 mb-8">
-            Our team is here to help. Contact us to discuss your donation or
-            explore partnership opportunities.
+            Join us in building thriving rural communities across Southeast
+            Kansas
           </p>
-          <Button size="lg" variant="secondary" asChild>
-            <Link href="/contact">Contact Us</Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" asChild>
+              <a href={DONATION_URL} target="_blank" rel="noopener noreferrer">
+                Donate Now
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+            >
+              <Link href="/contact">Questions? Contact Us</Link>
+            </Button>
+          </div>
         </div>
       </section>
 

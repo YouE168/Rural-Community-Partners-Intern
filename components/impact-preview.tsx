@@ -2,20 +2,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const impacts = [
   {
-    number: "150+",
+    number: "250+",
     label: "Entrepreneurs Supported",
   },
   {
-    number: "25+",
+    number: "20+",
     label: "Communities Served",
   },
   {
-    number: "$2.3M",
-    label: "Economic Impact Generated",
-  },
-  {
-    number: "50+",
-    label: "Active Mentors",
+    number: "$6M",
+    label: "Invested in SEK",
   },
 ];
 
@@ -31,8 +27,7 @@ export default function ImpactPreview() {
             Creating measurable change in rural Southeast Kansas
           </p>
         </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
           {impacts.map((impact, index) => (
             <Card key={index} className="text-center">
               <CardHeader>
