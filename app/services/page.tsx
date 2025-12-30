@@ -17,8 +17,10 @@ const services = [
     description:
       "Start and grow your business with comprehensive support and mentorship",
     details: [
-      "Business plan development and refinement",
-      "Mentorship matching with experienced entrepreneurs",
+      "Market Validation",
+      "Mentorship matching & SEK Catalyst: Empowered by KU",
+      "Jayhawk Consulting",
+      "Redtire Consulting",
       "Access to financing resources and guidance",
       "Training workshops and skill development",
       "Ongoing support and accountability",
@@ -42,15 +44,17 @@ const services = [
   {
     slug: "technical-assistance",
     title: "Technical Assistance",
-    description: "Hands-on support for implementation and project management",
+    description: "Supporting nonprofits and coalitions in Southeast Kansas",
     details: [
-      "Strategic planning and implementation support",
-      "Project management guidance",
-      "Operational efficiency improvements",
-      "Technology adoption and integration",
-      "Custom consulting for specific challenges",
+      "Bottom-up community-driven planning with residents and stakeholders",
+      "SWOT analysis facilitation",
+      "Priority identification based on lived experience and data",
+      "Action plan development",
+      "Resource acquisition support",
+      "Coalition and nonprofit capacity building",
     ],
-    whoItsFor: "Organizations seeking specialized expertise and guidance",
+    whoItsFor:
+      "Nonprofits, coalitions, and community organizations in Southeast Kansas's 4-county region",
   },
   {
     slug: "community-development",
@@ -61,6 +65,7 @@ const services = [
       "Economic development initiatives",
       "Local partnership development",
       "Infrastructure and asset assessment",
+      "CDBG grant support (playgrounds, trails, community facilities)",
       "Sustainable development projects",
     ],
     whoItsFor: "Communities, municipalities, and regional organizations",

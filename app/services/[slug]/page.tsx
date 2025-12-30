@@ -10,12 +10,14 @@ const serviceDetails = {
     title: "Entrepreneurship Support",
     hero: "Start and Grow Your Business",
     description:
-      "We believe in the power of entrepreneurship to transform communities. Our comprehensive support helps aspiring and existing entrepreneurs navigate the journey from idea to thriving business.",
+      "We believe in the power of entrepreneurship to transform communities. Our comprehensive support, including partnerships with KU School of Business, helps aspiring and existing entrepreneurs navigate the journey from idea to thriving business.",
     overview:
-      "Whether you're in the ideation phase or looking to scale an existing business, our entrepreneurship support provides the guidance, resources, and mentorship you need to succeed.",
+      "Whether you're in the ideation phase or looking to scale an existing business, our entrepreneurship support provides the guidance, resources, and mentorship you need to succeed. Through our partnerships with KU School of Business programs, you gain access to expert consulting and specialized support.",
     highlights: [
-      "Business Plan Development",
-      "Mentorship Matching",
+      "Market Validation",
+      "Mentorship Matching & SEK Catalyst: Empowered by KU",
+      "Jayhawk Consulting",
+      "Redtire Consulting",
       "Financing Guidance",
       "Training & Skills Development",
       "Ongoing Accountability Support",
@@ -35,9 +37,9 @@ const serviceDetails = {
       },
       {
         step: 3,
-        title: "Mentorship Matching",
+        title: "Mentorship & KU Partnership Matching",
         description:
-          "Connect with experienced mentors who have succeeded in your industry.",
+          "Connect with experienced mentors and KU School of Business programs aligned with your needs.",
       },
       {
         step: 4,
@@ -89,40 +91,42 @@ const serviceDetails = {
   },
   "technical-assistance": {
     title: "Technical Assistance",
-    hero: "Expert Guidance for Implementation",
+    hero: "Supporting Nonprofits & Coalitions",
     description:
-      "Hands-on support to help you successfully implement projects and overcome challenges.",
+      "We support 4 counties in Southeast Kansas with technical assistance to navigate the complex and difficult challenges of coalition and nonprofit work.",
     overview:
-      "Our technical assistance provides the specialized expertise you need to navigate complex projects and achieve your operational goals.",
+      "We invest our time, talent, and treasure in the communities because when each of us succeeds, we all succeed. Our approach is bottom-up, driven by residents with lived experience, local organizations and stakeholders, public health professionals, business owners, elected officials, and more.",
     highlights: [
-      "Strategic Planning",
-      "Project Management",
-      "Operations Improvement",
-      "Technology Integration",
-      "Custom Consulting",
+      "Community-Driven Planning",
+      "SWOT Analysis",
+      "Priority Identification",
+      "Action Plan Development",
+      "Resource Acquisition",
     ],
     process: [
       {
         step: 1,
-        title: "Needs Assessment",
+        title: "Community Engagement",
         description:
-          "Identify specific challenges and opportunities for improvement.",
+          "Residents with lived experience, local organizations, stakeholders, public health, business owners, and elected officials come together.",
       },
       {
         step: 2,
-        title: "Expert Engagement",
-        description: "Connect with specialists in your area of need.",
+        title: "SWOT Analysis",
+        description:
+          "Complete a comprehensive SWOT analysis to understand community strengths, weaknesses, opportunities, and threats.",
       },
       {
         step: 3,
-        title: "Implementation Support",
-        description: "Hands-on guidance through planning and execution phases.",
+        title: "Consensus Building",
+        description:
+          "Reach consensus on top priorities based on lived experience and data, then develop action plans.",
       },
       {
         step: 4,
-        title: "Sustainability Planning",
+        title: "Resource Support",
         description:
-          "Build capacity to maintain improvements and continue progress.",
+          "Work together to obtain the resources needed to address identified priorities.",
       },
     ],
   },
@@ -132,11 +136,12 @@ const serviceDetails = {
     description:
       "Strategic initiatives to build thriving local economies and vibrant communities.",
     overview:
-      "We work with communities to develop strategic plans, build partnerships, and create sustainable economic development initiatives.",
+      "We work with communities to develop strategic plans, build partnerships, and create sustainable economic development initiatives. Our impact includes securing CDBG grants for playgrounds and trails in small communities, and supporting major projects like the Washington School in Pittsburg.",
     highlights: [
       "Community Planning",
       "Economic Development",
       "Partnership Building",
+      "CDBG Grant Support",
       "Asset Assessment",
       "Sustainability Projects",
     ],
@@ -166,6 +171,11 @@ const serviceDetails = {
           "Execute projects and measure progress toward community goals.",
       },
     ],
+    impactStories: [
+      "Secured CDBG grants for playground development in small communities",
+      "Supported trail infrastructure projects across the region",
+      "Helped fund the Washington School project in Pittsburg",
+    ],
   },
   regional: {
     title: "Regional Initiatives",
@@ -173,7 +183,7 @@ const serviceDetails = {
     description:
       "Southeast Kansas-wide programs and partnerships for collective economic growth.",
     overview:
-      "By connecting communities and organizations across Southeast Kansas, we amplify impact and create opportunities that benefit the entire region.",
+      "By connecting communities and organizations across Southeast Kansas, we amplify impact and create opportunities that benefit the entire region through a collaborative, community-driven approach.",
     highlights: [
       "Regional Strategy",
       "Multi-Community Projects",
@@ -207,19 +217,22 @@ const serviceDetails = {
   },
 };
 
+type ServiceSlug = keyof typeof serviceDetails;
+
+export async function generateStaticParams() {
+  return Object.keys(serviceDetails).map((slug) => ({
+    slug: slug,
+  }));
+}
+
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateStaticParams() {
-  return Object.keys(serviceDetails).map((slug) => ({
-    slug,
-  }));
-}
-
 export default async function ServiceDetailPage({ params }: PageProps) {
-  const { slug } = await params;
-  const service = serviceDetails[slug as keyof typeof serviceDetails];
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug as ServiceSlug;
+  const service = serviceDetails[slug];
 
   if (!service) {
     notFound();
@@ -254,22 +267,45 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       </section>
 
       {/* Highlights */}
-      <section className="w-full py-16 sm:py-20 md:py-24 bg-primary/5">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="w-full py-12 sm:py-16 md:py-18 bg-primary/5">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h3 className="text-3xl font-bold text-foreground mb-12 text-center">
             What's Included
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {service.highlights.map((highlight, idx) => (
-              <Card key={idx} className="text-center">
-                <CardContent className="pt-6">
-                  <p className="font-medium text-foreground">{highlight}</p>
-                </CardContent>
-              </Card>
+              <div
+                key={idx}
+                className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm"
+              >
+                <div className="flex-shrink-0 w-2 h-2 rounded-full bg-primary"></div>
+                <p className="font-medium text-foreground text-left">
+                  {highlight}
+                </p>
+              </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Impact Stories - Community Development Only */}
+      {slug === "community-development" && "impactStories" in service && (
+        <section className="w-full py-16 sm:py-20 md:py-24 bg-background">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <h3 className="text-3xl font-bold text-foreground mb-8">
+              Impact Stories
+            </h3>
+            <div className="space-y-4">
+              {service.impactStories.map((story, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <span className="text-primary font-bold mt-1">✓</span>
+                  <p className="text-lg text-muted-foreground">{story}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Process */}
       <section className="w-full py-16 sm:py-20 md:py-24 bg-background">
