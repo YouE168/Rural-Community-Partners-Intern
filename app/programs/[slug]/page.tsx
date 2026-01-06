@@ -167,9 +167,9 @@ const programDetails: {
     title: "Small Business and Entrepreneurs Council",
     hero: "Connect with Fellow Entrepreneurs",
     description:
-      "The Small Business and Entrepreneurs Council is a peer-led community of successful rural entrepreneurs who share their knowledge, experiences, and networks to help each other succeed.",
+      "The Small Business & Entrepreneurship Council serves as the policy and systems-building arm of Rural Community Partners entrepreneurship work in Southeast Kansas. SBEC brings together entrepreneurs, lenders, service providers, and community leaders to strengthen the local small business ecosystem and remove barriers to business start-up, growth, and sustainability.",
     overview:
-      "Our Small Business and Entrepreneurs Council brings together business owners and community leaders for regular meetings, networking opportunities, and collaborative problem-solving. Members benefit from the collective wisdom and experience of their peers, creating a supportive community focused on mutual success.",
+      "The Council helps shape regional entrepreneurship strategy, informs program design, and administers RCP's micro-grant program to ensure resources are aligned with real-world business needs. By identifying gaps, elevating local voice, and advancing collaborative solutions, SBEC supports policies, practices, and investments that create a more accessible, resilient, and inclusive rural economy.",
     benefits: [
       "Monthly networking meetings and peer discussions",
       "Access to a network of successful entrepreneurs and community leaders",
@@ -180,8 +180,7 @@ const programDetails: {
     ],
     whoItsFor:
       "Established entrepreneurs, business owners, and community leaders interested in peer networking and collaborative growth",
-    commitment:
-      "Monthly meetings (typically 2 hours), occasional special events and workshops",
+    commitment: "",
     members: [
       {
         name: "Jody Love",
@@ -191,7 +190,7 @@ const programDetails: {
       },
       {
         name: "Melissa Weed",
-        business: " ",
+        business: "",
         icon: "👤",
         image: "/MelissaWeed-headshot.jpg",
       },
@@ -208,7 +207,7 @@ const programDetails: {
         image: "/HeatherHorton-headshot.jpg",
       },
       {
-        name: "Blanca",
+        name: "Blanca Lopez",
         business: "",
         icon: "👤",
         image: "/Blanca-headshot.jpg",
@@ -218,6 +217,16 @@ const programDetails: {
         business: "",
         icon: "👤",
         image: "/NacyBrown-headshot.jpg",
+      },
+      {
+        name: "Coming Soon",
+        business: "Bourbon County",
+        icon: "👤",
+      },
+      {
+        name: "Coming Soon",
+        business: "Labette County",
+        icon: "👤",
       },
     ],
   },
@@ -239,15 +248,13 @@ const programDetails: {
     whoItsFor:
       "Entrepreneurs at any business stage seeking professional guidance and accountability",
     commitment:
-      "Typically 1-2 hour monthly meetings with flexibility based on mentor/mentee availability",
+      "Up to 3 hours per month. Mentors are compensated at $50 per hour through a Blue Cross Blue Shield grant. We will have more structured programming in the coming months.",
     members: [
-      { name: "Comming Soon", expertise: "", icon: "" },
-      { name: "Comming Soon", expertise: "", icon: "" },
-
       {
-        name: "Comming Soon",
-        expertise: "",
-        icon: "",
+        name: "Jody Love",
+        business: "",
+        icon: "👤",
+        image: "/Jody-headshot.jpg",
       },
     ],
   },
@@ -267,7 +274,7 @@ const programDetails: {
       "Regional networking and cross-community learning",
     ],
     whoItsFor:
-      "Communities, municipalities, and local organizations seeking coordinated economic development",
+      "Communities, municipalities, local organizations, and residents seeking coordinated economic development",
     commitment:
       "Regular team meetings, project work, and collaboration with RCP staff",
     members: [
@@ -406,16 +413,29 @@ export default async function ProgramDetailPage({ params }: PageProps) {
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             {program.overview}
           </p>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-semibold text-foreground mb-4">
-                Time Commitment
-              </h3>
-              <div className="flex items-start gap-3">
-                <Calendar className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <p className="text-muted-foreground">{program.commitment}</p>
+          {program.commitment && (
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="font-semibold text-foreground mb-4">
+                  Time Commitment
+                </h3>
+                <div className="flex items-start gap-3">
+                  <Calendar className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                  <p className="text-muted-foreground">{program.commitment}</p>
+                </div>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-4">
+                  Who It's For
+                </h3>
+                <div className="flex items-start gap-3">
+                  <Users className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                  <p className="text-muted-foreground">{program.whoItsFor}</p>
+                </div>
               </div>
             </div>
+          )}
+          {!program.commitment && (
             <div>
               <h3 className="font-semibold text-foreground mb-4">
                 Who It's For
@@ -425,7 +445,7 @@ export default async function ProgramDetailPage({ params }: PageProps) {
                 <p className="text-muted-foreground">{program.whoItsFor}</p>
               </div>
             </div>
-          </div>
+          )}
         </div>
       </section>
 
@@ -531,8 +551,9 @@ export default async function ProgramDetailPage({ params }: PageProps) {
               </h3>
               <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
                 Explore the impact of Local Health Equity Action Teams (LHEATs)
-                across Kansas. These 12 community-led projects reached an
-                estimated{" "}
+                across Kansas. The $2,500 PHIG Innovation Funds represent one
+                additional opportunity teams received to pilot creative
+                solutions. These 12 community-led projects reached an estimated{" "}
                 <span className="font-bold text-primary">3,000+ residents</span>{" "}
                 through innovative solutions addressing food security, health
                 access, and community well-being.
@@ -698,31 +719,28 @@ export default async function ProgramDetailPage({ params }: PageProps) {
             {/* Additional Context */}
             <div className="mt-10 p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl border border-primary/20">
               <h4 className="font-bold text-foreground mb-4 text-2xl">
-                About LHEAT Innovation Funds
+                About Local Action Teams
               </h4>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  The $2,500 PHIG Innovation Funds empowered 12 Local Health
-                  Equity Action Teams (LHEATs) across Kansas to design and
-                  implement community-led projects that addressed locally
-                  defined needs while adhering to funding restrictions,
-                  including prohibitions on direct food purchases.
+                  Since 2021, Local Health Equity Action Teams (LHEATs) across
+                  Kansas have each received annual budgets of $25,000 to
+                  implement community-driven projects that address local health
+                  and wellness priorities.
                 </p>
                 <p>
-                  Even within these parameters, LHEATs developed creative,
-                  high-impact strategies to strengthen food access, basic needs
-                  support, social connection, navigation of services, and
-                  community identity. Several teams advanced nutrition and food
-                  security indirectly by distributing gardening supplies,
-                  offering cooking demonstrations, coordinating community-led
-                  food basket initiatives, and enhancing access to resource
-                  information.
+                  These teams have completed impactful projects including
+                  Laundry of Love programs, community greenhouses and gardens,
+                  transportation initiatives, health and wellness workshops, and
+                  much more. All designed and led by community members who
+                  understand their neighbors' needs best.
                 </p>
-                <p className="font-semibold text-foreground">
+
+                <p>
                   These projects demonstrate how flexible, locally controlled
-                  innovation funds can catalyze practical solutions, deepen
-                  community partnerships, and advance health equity in ways that
-                  reflect community priorities and values.
+                  funds can catalyze practical solutions, deepen community
+                  partnerships, and advance health equity in ways that reflect
+                  community priorities and values.
                 </p>
               </div>
             </div>
@@ -759,67 +777,80 @@ export default async function ProgramDetailPage({ params }: PageProps) {
       </section>
 
       {/* How to Join */}
-      <section className="w-full py-12 sm:py-16 md:py-20 bg-background">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h3 className="text-3xl font-bold text-foreground mb-3 text-center">
-            Ready to Join?
-          </h3>
-          <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
-            {slug === "entrepreneur-council"
-              ? "Becoming a council member is easy. Follow these simple steps to get started."
-              : slug === "mentorship"
-              ? "Getting matched with a mentor is simple. Here's how to begin your journey."
-              : slug === "local-action-teams"
-              ? "Starting a Local Action Team in your community is straightforward. Here's the process."
-              : slug === "board-members"
-              ? "Joining our Board of Directors involves a nomination and selection process. Here's how it works."
-              : "Getting involved is easy. Follow these simple steps."}
-          </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {[
-              {
-                step: 1,
-                title: "Express Interest",
-                desc: "Reach out via our contact form or email to express your interest in joining",
-              },
-              {
-                step: 2,
-                title: "Initial Conversation",
-                desc: "We'll schedule a casual chat to discuss your goals and experience",
-              },
-              {
-                step: 3,
-                title: "Welcome Onboarding",
-                desc: "Learn about program structure, expectations, and how to contribute",
-              },
-              {
-                step: 4,
-                title: "Engage & Collaborate",
-                desc: "Start networking, sharing insights, and growing with fellow entrepreneurs",
-              },
-            ].map((item) => (
-              <Card
-                key={item.step}
-                className="hover:shadow-lg transition-shadow"
-              >
-                <CardHeader className="pb-3">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-primary to-accent text-primary-foreground font-bold text-lg mb-3 shadow-md">
-                    {item.step}
-                  </div>
-                  <CardTitle className="text-foreground text-lg">
-                    {item.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {item.desc}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+      {slug !== "entrepreneur-council" && (
+        <section className="w-full py-12 sm:py-16 md:py-20 bg-background">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <h3 className="text-3xl font-bold text-foreground mb-3 text-center">
+              Ready to Join?
+            </h3>
+            <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
+              {slug === "mentorship"
+                ? "Getting matched with a mentor is simple. Here's how to begin your journey."
+                : slug === "local-action-teams"
+                ? "Starting a Local Action Team in your community is straightforward. Here's the process."
+                : slug === "board-members"
+                ? "Joining our Board of Directors involves a nomination and selection process. Here's how it works."
+                : "Getting involved is easy. Follow these simple steps."}
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+              {[
+                {
+                  step: 1,
+                  title: "Express Interest",
+                  desc:
+                    slug === "local-action-teams"
+                      ? "Email jody@hbcat.org to express your interest in joining or starting a team"
+                      : "Reach out via our contact form or email to express your interest in joining",
+                },
+                {
+                  step: 2,
+                  title: "Initial Conversation",
+                  desc: "We'll schedule a casual chat to discuss your goals and experience",
+                },
+                {
+                  step: 3,
+                  title: "Welcome Onboarding",
+                  desc: "Learn about program structure, expectations, and how to contribute",
+                },
+                {
+                  step: 4,
+                  title: "Engage & Collaborate",
+                  desc: "Start networking, sharing insights, and growing with fellow entrepreneurs",
+                },
+              ].map((item) => (
+                <Card
+                  key={item.step}
+                  className="hover:shadow-lg transition-shadow"
+                >
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-br from-primary to-accent text-primary-foreground font-bold text-lg mb-3 shadow-md">
+                      {item.step}
+                    </div>
+                    <CardTitle className="text-foreground text-lg">
+                      {item.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {item.desc}
+                    </p>
+                    {item.step === 1 && slug === "local-action-teams" && (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="mt-3 w-full"
+                        asChild
+                      >
+                        <a href="mailto:jody@hbcat.org ">Email Jody Love</a>
+                      </Button>
+                    )}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="w-full py-16 sm:py-20 md:py-24 bg-gradient-to-r from-primary to-accent">

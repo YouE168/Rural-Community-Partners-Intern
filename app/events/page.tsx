@@ -4,8 +4,18 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import Link from "next/link";
-import { Calendar, Clock, MapPin, Users } from "lucide-react";
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  Users,
+  Image as ImageIcon,
+  X,
+} from "lucide-react";
 import { useState } from "react";
 
 const allEvents = [
@@ -18,42 +28,145 @@ const allEvents = [
     location: "Location",
     type: "Workshop",
     attendees: 25,
-    registrationUrl: "#register",
+    image: "/images/workshop-placeholder.jpg",
   },
-
   {
     id: 2,
-    title: "Example: Regional Leadership Summit",
-    description:
-      "Network with community leaders and innovators from across Southeast Kansas for a full day of learning.",
-    date: "January 10, 2026",
-    time: "8:30 AM - 5:00 PM",
-    location: "Salina, KS",
+    title: "Coming Soon",
+    description: "Description",
+    date: "Date",
+    time: "Time",
+    location: "Location",
     type: "Summit",
     attendees: 100,
-    registrationUrl: "#register",
+    image: "/images/summit-placeholder.jpg",
   },
 ];
 
 const pastEvents = [
   {
     id: 101,
-    title: "Example: Entrepreneur Networking Event",
-    date: "September 15, 2024",
-    location: "Topeka, KS",
+    title: "Social Media for Small Business",
+    date: "November 5, 2025",
+    location: "Fort Scott, KS",
     attendees: 45,
   },
   {
     id: 102,
-    title: "Title",
-    date: "Date",
-    location: "Location",
-    attendees: 32,
+    title:
+      "National Lead Poisoning Prevention Week - Southeast Kansas Awareness Series",
+    date: "October 18 - 25, 2025",
+    location:
+      "Various communities across Southeast Kansas (Bourbon, Crawford, Labette, and Montgomery Counties)",
+    attendees: "No Limit",
+  },
+  {
+    id: 103,
+    title: "Dare to Dream: Women's Entrepreneurship Statewide Conference",
+    date: "September 28, 2025",
+    location: "Fort Scott Community College, KS",
+    attendees: 45,
   },
 ];
 
 export default function EventsPage() {
   const [showPastEvents, setShowPastEvents] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState<
+    (typeof allEvents)[0] | null
+  >(null);
+  const [isRegistering, setIsRegistering] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    organization: "",
+    dietaryRestrictions: "",
+    accessibilityNeeds: "",
+  });
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
+  const handleRegisterClick = (event: (typeof allEvents)[0]) => {
+    setSelectedEvent(event);
+    setIsRegistering(true);
+    setSubmitStatus({ type: null, message: "" });
+  };
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "event-registration",
+          data: {
+            ...formData,
+            eventId: selectedEvent?.id,
+            eventTitle: selectedEvent?.title,
+            eventDate: selectedEvent?.date,
+          },
+          timestamp: new Date().toISOString(),
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message:
+            "Registration successful! We'll send you a confirmation email shortly.",
+        });
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          organization: "",
+          dietaryRestrictions: "",
+          accessibilityNeeds: "",
+        });
+        setTimeout(() => {
+          setIsRegistering(false);
+          setSelectedEvent(null);
+        }, 3000);
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: result.message || "Registration failed. Please try again.",
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "An error occurred. Please try again later.",
+      });
+    }
+  };
+
+  const closeModal = () => {
+    setIsRegistering(false);
+    setSelectedEvent(null);
+    setFormData({
+      fullName: "",
+      email: "",
+      phone: "",
+      organization: "",
+      dietaryRestrictions: "",
+      accessibilityNeeds: "",
+    });
+    setSubmitStatus({ type: null, message: "" });
+  };
 
   return (
     <main className="min-h-screen">
@@ -91,44 +204,63 @@ export default function EventsPage() {
                 key={event.id}
                 className="overflow-hidden hover:shadow-lg transition-shadow"
               >
-                <CardContent className="pt-6">
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="md:col-span-2">
-                      <div className="flex items-start gap-3 mb-4">
-                        <span className="text-xs font-semibold px-3 py-1 rounded-full bg-primary/10 text-primary">
-                          {event.type}
-                        </span>
-                      </div>
-                      <h3 className="text-2xl font-bold text-foreground mb-2">
-                        {event.title}
-                      </h3>
-                      <p className="text-muted-foreground mb-4">
-                        {event.description}
-                      </p>
-                      <div className="space-y-2">
-                        <div className="flex items-center gap-3 text-muted-foreground">
-                          <Calendar className="h-4 w-4" />
-                          <span>{event.date}</span>
-                        </div>
-                        <div className="flex items-center gap-3 text-muted-foreground">
-                          <Clock className="h-4 w-4" />
-                          <span>{event.time}</span>
-                        </div>
-                        <div className="flex items-center gap-3 text-muted-foreground">
-                          <MapPin className="h-4 w-4" />
-                          <span>{event.location}</span>
-                        </div>
-                        <div className="flex items-center gap-3 text-muted-foreground">
-                          <Users className="h-4 w-4" />
-                          <span>{event.attendees} people registered</span>
-                        </div>
-                      </div>
+                <CardContent className="p-0">
+                  <div className="grid md:grid-cols-3 gap-0">
+                    {/* Event Image */}
+                    <div className="md:col-span-1 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center min-h-[250px]">
+                      <ImageIcon className="h-24 w-24 text-primary/40" />
+                      {/* Replace with actual image when available:
+                      <img 
+                        src={event.image} 
+                        alt={event.title}
+                        className="w-full h-full object-cover"
+                      /> */}
                     </div>
-                    <div className="flex flex-col justify-between md:border-l md:border-border md:pl-6">
-                      <div></div>
-                      <Button asChild className="w-full">
-                        <a href={event.registrationUrl}>Register Now</a>
-                      </Button>
+
+                    {/* Event Details */}
+                    <div className="md:col-span-2 p-6">
+                      <div className="grid md:grid-cols-3 gap-6 h-full">
+                        <div className="md:col-span-2">
+                          <div className="flex items-start gap-3 mb-4">
+                            <span className="text-xs font-semibold px-3 py-1 rounded-full bg-primary/10 text-primary">
+                              {event.type}
+                            </span>
+                          </div>
+                          <h3 className="text-2xl font-bold text-foreground mb-2">
+                            {event.title}
+                          </h3>
+                          <p className="text-muted-foreground mb-4">
+                            {event.description}
+                          </p>
+                          <div className="space-y-2">
+                            <div className="flex items-center gap-3 text-muted-foreground">
+                              <Calendar className="h-4 w-4" />
+                              <span>{event.date}</span>
+                            </div>
+                            <div className="flex items-center gap-3 text-muted-foreground">
+                              <Clock className="h-4 w-4" />
+                              <span>{event.time}</span>
+                            </div>
+                            <div className="flex items-center gap-3 text-muted-foreground">
+                              <MapPin className="h-4 w-4" />
+                              <span>{event.location}</span>
+                            </div>
+                            <div className="flex items-center gap-3 text-muted-foreground">
+                              <Users className="h-4 w-4" />
+                              <span>{event.attendees} people registered</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex flex-col justify-between md:border-l md:border-border md:pl-6">
+                          <div></div>
+                          <Button
+                            onClick={() => handleRegisterClick(event)}
+                            className="w-full"
+                          >
+                            Register Now
+                          </Button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
@@ -137,6 +269,139 @@ export default function EventsPage() {
           </div>
         </div>
       </section>
+
+      {/* Custom Registration Modal */}
+      {isRegistering && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-background rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            {/* Modal Header */}
+            <div className="sticky top-0 bg-background border-b border-border p-6 flex items-start justify-between">
+              <div>
+                <h2 className="text-2xl font-bold text-foreground">
+                  Register for {selectedEvent?.title}
+                </h2>
+                <p className="text-muted-foreground mt-1">
+                  {selectedEvent?.date} • {selectedEvent?.location}
+                </p>
+              </div>
+              <button
+                onClick={closeModal}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+
+            {/* Modal Body */}
+            <form onSubmit={handleSubmit} className="p-6 space-y-4">
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="fullName">
+                    Full Name <span className="text-destructive">*</span>
+                  </Label>
+                  <Input
+                    id="fullName"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="email">
+                    Email <span className="text-destructive">*</span>
+                  </Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="phone">
+                    Phone <span className="text-destructive">*</span>
+                  </Label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="organization">Organization (Optional)</Label>
+                  <Input
+                    id="organization"
+                    name="organization"
+                    value={formData.organization}
+                    onChange={handleInputChange}
+                  />
+                </div>
+              </div>
+
+              <div>
+                <Label htmlFor="dietaryRestrictions">
+                  Dietary Restrictions (Optional)
+                </Label>
+                <Textarea
+                  id="dietaryRestrictions"
+                  name="dietaryRestrictions"
+                  value={formData.dietaryRestrictions}
+                  onChange={handleInputChange}
+                  rows={2}
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="accessibilityNeeds">
+                  Accessibility Needs (Optional)
+                </Label>
+                <Textarea
+                  id="accessibilityNeeds"
+                  name="accessibilityNeeds"
+                  value={formData.accessibilityNeeds}
+                  onChange={handleInputChange}
+                  rows={2}
+                />
+              </div>
+
+              {submitStatus.type && (
+                <div
+                  className={`p-4 rounded-md ${
+                    submitStatus.type === "success"
+                      ? "bg-green-50 text-green-800 border border-green-200"
+                      : "bg-red-50 text-red-800 border border-red-200"
+                  }`}
+                >
+                  {submitStatus.message}
+                </div>
+              )}
+
+              <div className="flex gap-3 pt-4">
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={closeModal}
+                  className="flex-1"
+                >
+                  Cancel
+                </Button>
+                <Button type="submit" className="flex-1">
+                  Complete Registration
+                </Button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
 
       {/* Past Events */}
       <section className="w-full py-16 sm:py-20 md:py-24 bg-primary/5">

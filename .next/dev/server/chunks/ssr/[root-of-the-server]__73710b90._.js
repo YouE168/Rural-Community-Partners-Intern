@@ -765,8 +765,8 @@ const programDetails = {
     "entrepreneur-council": {
         title: "Small Business and Entrepreneurs Council",
         hero: "Connect with Fellow Entrepreneurs",
-        description: "The Small Business and Entrepreneurs Council is a peer-led community of successful rural entrepreneurs who share their knowledge, experiences, and networks to help each other succeed.",
-        overview: "Our Small Business and Entrepreneurs Council brings together business owners and community leaders for regular meetings, networking opportunities, and collaborative problem-solving. Members benefit from the collective wisdom and experience of their peers, creating a supportive community focused on mutual success.",
+        description: "The Small Business & Entrepreneurship Council serves as the policy and systems-building arm of Rural Community Partners entrepreneurship work in Southeast Kansas. SBEC brings together entrepreneurs, lenders, service providers, and community leaders to strengthen the local small business ecosystem and remove barriers to business start-up, growth, and sustainability.",
+        overview: "The Council helps shape regional entrepreneurship strategy, informs program design, and administers RCP's micro-grant program to ensure resources are aligned with real-world business needs. By identifying gaps, elevating local voice, and advancing collaborative solutions, SBEC supports policies, practices, and investments that create a more accessible, resilient, and inclusive rural economy.",
         benefits: [
             "Monthly networking meetings and peer discussions",
             "Access to a network of successful entrepreneurs and community leaders",
@@ -776,7 +776,7 @@ const programDetails = {
             "Support for community health and economic initiatives"
         ],
         whoItsFor: "Established entrepreneurs, business owners, and community leaders interested in peer networking and collaborative growth",
-        commitment: "Monthly meetings (typically 2 hours), occasional special events and workshops",
+        commitment: "",
         members: [
             {
                 name: "Jody Love",
@@ -786,7 +786,7 @@ const programDetails = {
             },
             {
                 name: "Melissa Weed",
-                business: " ",
+                business: "",
                 icon: "👤",
                 image: "/MelissaWeed-headshot.jpg"
             },
@@ -803,7 +803,7 @@ const programDetails = {
                 image: "/HeatherHorton-headshot.jpg"
             },
             {
-                name: "Blanca",
+                name: "Blanca Lopez",
                 business: "",
                 icon: "👤",
                 image: "/Blanca-headshot.jpg"
@@ -813,6 +813,16 @@ const programDetails = {
                 business: "",
                 icon: "👤",
                 image: "/NacyBrown-headshot.jpg"
+            },
+            {
+                name: "Coming Soon",
+                business: "Bourbon County",
+                icon: "👤"
+            },
+            {
+                name: "Coming Soon",
+                business: "Labette County",
+                icon: "👤"
             }
         ]
     },
@@ -830,22 +840,13 @@ const programDetails = {
             "Ongoing support and encouragement"
         ],
         whoItsFor: "Entrepreneurs at any business stage seeking professional guidance and accountability",
-        commitment: "Typically 1-2 hour monthly meetings with flexibility based on mentor/mentee availability",
+        commitment: "Up to 3 hours per month. Mentors are compensated at $50 per hour through a Blue Cross Blue Shield grant. We will have more structured programming in the coming months.",
         members: [
             {
-                name: "Comming Soon",
-                expertise: "",
-                icon: ""
-            },
-            {
-                name: "Comming Soon",
-                expertise: "",
-                icon: ""
-            },
-            {
-                name: "Comming Soon",
-                expertise: "",
-                icon: ""
+                name: "Jody Love",
+                business: "",
+                icon: "👤",
+                image: "/Jody-headshot.jpg"
             }
         ]
     },
@@ -862,7 +863,7 @@ const programDetails = {
             "Professional facilitation and coaching",
             "Regional networking and cross-community learning"
         ],
-        whoItsFor: "Communities, municipalities, and local organizations seeking coordinated economic development",
+        whoItsFor: "Communities, municipalities, local organizations, and residents seeking coordinated economic development",
         commitment: "Regular team meetings, project work, and collaboration with RCP staff",
         members: [
             {
@@ -967,7 +968,7 @@ async function ProgramDetailPage({ params }) {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$header$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                lineNumber: 386,
+                lineNumber: 393,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -980,7 +981,7 @@ async function ProgramDetailPage({ params }) {
                             children: program.hero
                         }, void 0, false, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 391,
+                            lineNumber: 398,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -988,18 +989,18 @@ async function ProgramDetailPage({ params }) {
                             children: program.description
                         }, void 0, false, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 394,
+                            lineNumber: 401,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                    lineNumber: 390,
+                    lineNumber: 397,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                lineNumber: 389,
+                lineNumber: 396,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1012,7 +1013,7 @@ async function ProgramDetailPage({ params }) {
                             children: program.title
                         }, void 0, false, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 403,
+                            lineNumber: 410,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1020,10 +1021,10 @@ async function ProgramDetailPage({ params }) {
                             children: program.overview
                         }, void 0, false, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 406,
+                            lineNumber: 413,
                             columnNumber: 11
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        program.commitment && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "grid md:grid-cols-2 gap-8",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1033,8 +1034,8 @@ async function ProgramDetailPage({ params }) {
                                             children: "Time Commitment"
                                         }, void 0, false, {
                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                            lineNumber: 411,
-                                            columnNumber: 15
+                                            lineNumber: 419,
+                                            columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "flex items-start gap-3",
@@ -1043,28 +1044,28 @@ async function ProgramDetailPage({ params }) {
                                                     className: "h-5 w-5 text-primary mt-1 flex-shrink-0"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                    lineNumber: 415,
-                                                    columnNumber: 17
+                                                    lineNumber: 423,
+                                                    columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     className: "text-muted-foreground",
                                                     children: program.commitment
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                    lineNumber: 416,
-                                                    columnNumber: 17
+                                                    lineNumber: 424,
+                                                    columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                            lineNumber: 414,
-                                            columnNumber: 15
+                                            lineNumber: 422,
+                                            columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 410,
-                                    columnNumber: 13
+                                    lineNumber: 418,
+                                    columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     children: [
@@ -1073,8 +1074,8 @@ async function ProgramDetailPage({ params }) {
                                             children: "Who It's For"
                                         }, void 0, false, {
                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                            lineNumber: 420,
-                                            columnNumber: 15
+                                            lineNumber: 428,
+                                            columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "flex items-start gap-3",
@@ -1083,44 +1084,84 @@ async function ProgramDetailPage({ params }) {
                                                     className: "h-5 w-5 text-primary mt-1 flex-shrink-0"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                    lineNumber: 424,
-                                                    columnNumber: 17
+                                                    lineNumber: 432,
+                                                    columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     className: "text-muted-foreground",
                                                     children: program.whoItsFor
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                    lineNumber: 425,
-                                                    columnNumber: 17
+                                                    lineNumber: 433,
+                                                    columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                            lineNumber: 423,
-                                            columnNumber: 15
+                                            lineNumber: 431,
+                                            columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 419,
-                                    columnNumber: 13
+                                    lineNumber: 427,
+                                    columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 409,
-                            columnNumber: 11
+                            lineNumber: 417,
+                            columnNumber: 13
+                        }, this),
+                        !program.commitment && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                    className: "font-semibold text-foreground mb-4",
+                                    children: "Who It's For"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/programs/[slug]/page.tsx",
+                                    lineNumber: 440,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex items-start gap-3",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"], {
+                                            className: "h-5 w-5 text-primary mt-1 flex-shrink-0"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/programs/[slug]/page.tsx",
+                                            lineNumber: 444,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-muted-foreground",
+                                            children: program.whoItsFor
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/programs/[slug]/page.tsx",
+                                            lineNumber: 445,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/app/programs/[slug]/page.tsx",
+                                    lineNumber: 443,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/app/programs/[slug]/page.tsx",
+                            lineNumber: 439,
+                            columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                    lineNumber: 402,
+                    lineNumber: 409,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                lineNumber: 401,
+                lineNumber: 408,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1136,7 +1177,7 @@ async function ProgramDetailPage({ params }) {
                                     children: slug === "entrepreneur-council" ? "Meet Our Council Members" : slug === "mentorship" ? "Connect with Our Mentors" : slug === "local-action-teams" ? "Active Local Action Teams" : slug === "board-members" ? "Meet Our Board" : "Team Members"
                                 }, void 0, false, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 436,
+                                    lineNumber: 456,
                                     columnNumber: 13
                                 }, this),
                                 slug === "entrepreneur-council" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1144,13 +1185,13 @@ async function ProgramDetailPage({ params }) {
                                     children: "Dedicated community leaders driving economic development and entrepreneurship across Southeast Kansas"
                                 }, void 0, false, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 448,
+                                    lineNumber: 468,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 435,
+                            lineNumber: 455,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1169,7 +1210,7 @@ async function ProgramDetailPage({ params }) {
                                                             className: "absolute inset-0 rounded-full bg-gradient-to-r from-primary via-accent to-secondary opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-300 animate-pulse"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                            lineNumber: 466,
+                                                            lineNumber: 486,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1185,17 +1226,17 @@ async function ProgramDetailPage({ params }) {
                                                                     }
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                                    lineNumber: 470,
+                                                                    lineNumber: 490,
                                                                     columnNumber: 29
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                                lineNumber: 469,
+                                                                lineNumber: 489,
                                                                 columnNumber: 27
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                            lineNumber: 468,
+                                                            lineNumber: 488,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1203,25 +1244,25 @@ async function ProgramDetailPage({ params }) {
                                                             children: slug === "entrepreneur-council" ? "Council Member" : slug === "mentorship" ? "Mentor" : slug === "local-action-teams" ? "Team Leader" : slug === "board-members" ? "Board Member" : "Member"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                            lineNumber: 482,
+                                                            lineNumber: 502,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                    lineNumber: 465,
+                                                    lineNumber: 485,
                                                     columnNumber: 23
                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "text-5xl p-4 bg-primary/10 rounded-full",
                                                     children: member.icon
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                    lineNumber: 495,
+                                                    lineNumber: 515,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                lineNumber: 463,
+                                                lineNumber: 483,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1232,20 +1273,20 @@ async function ProgramDetailPage({ params }) {
                                                         children: member.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                        lineNumber: 502,
+                                                        lineNumber: 522,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "h-0.5 w-12 bg-gradient-to-r from-primary to-accent mx-auto mt-1.5 rounded-full"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                        lineNumber: 505,
+                                                        lineNumber: 525,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                lineNumber: 501,
+                                                lineNumber: 521,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1253,34 +1294,34 @@ async function ProgramDetailPage({ params }) {
                                                 children: "business" in member ? member.business : "expertise" in member ? member.expertise : "community" in member ? member.community : ""
                                             }, void 0, false, {
                                                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                lineNumber: 508,
+                                                lineNumber: 528,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/programs/[slug]/page.tsx",
-                                        lineNumber: 462,
+                                        lineNumber: 482,
                                         columnNumber: 17
                                     }, this)
                                 }, idx, false, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 458,
+                                    lineNumber: 478,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 456,
+                            lineNumber: 476,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                    lineNumber: 434,
+                    lineNumber: 454,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                lineNumber: 433,
+                lineNumber: 453,
                 columnNumber: 7
             }, this),
             slug === "local-action-teams" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1296,20 +1337,20 @@ async function ProgramDetailPage({ params }) {
                                     children: "LHEAT Innovation Projects"
                                 }, void 0, false, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 529,
+                                    lineNumber: 549,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed",
                                     children: [
-                                        "Explore the impact of Local Health Equity Action Teams (LHEATs) across Kansas. These 12 community-led projects reached an estimated",
+                                        "Explore the impact of Local Health Equity Action Teams (LHEATs) across Kansas. The $2,500 PHIG Innovation Funds represent one additional opportunity teams received to pilot creative solutions. These 12 community-led projects reached an estimated",
                                         " ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "font-bold text-primary",
                                             children: "3,000+ residents"
                                         }, void 0, false, {
                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                            lineNumber: 536,
+                                            lineNumber: 557,
                                             columnNumber: 17
                                         }, this),
                                         " ",
@@ -1317,13 +1358,13 @@ async function ProgramDetailPage({ params }) {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 532,
+                                    lineNumber: 552,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 528,
+                            lineNumber: 548,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1339,7 +1380,7 @@ async function ProgramDetailPage({ params }) {
                                                 children: "12"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                lineNumber: 546,
+                                                lineNumber: 567,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1347,7 +1388,7 @@ async function ProgramDetailPage({ params }) {
                                                 children: "Local Action Teams"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                lineNumber: 549,
+                                                lineNumber: 570,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1355,18 +1396,18 @@ async function ProgramDetailPage({ params }) {
                                                 children: "Across Kansas Counties"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                lineNumber: 552,
+                                                lineNumber: 573,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/programs/[slug]/page.tsx",
-                                        lineNumber: 545,
+                                        lineNumber: 566,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 544,
+                                    lineNumber: 565,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -1379,7 +1420,7 @@ async function ProgramDetailPage({ params }) {
                                                 children: "3,000+"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                lineNumber: 560,
+                                                lineNumber: 581,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1387,7 +1428,7 @@ async function ProgramDetailPage({ params }) {
                                                 children: "Residents Reached"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                lineNumber: 563,
+                                                lineNumber: 584,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1395,18 +1436,18 @@ async function ProgramDetailPage({ params }) {
                                                 children: "Through Innovation Projects"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                lineNumber: 566,
+                                                lineNumber: 587,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/programs/[slug]/page.tsx",
-                                        lineNumber: 559,
+                                        lineNumber: 580,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 558,
+                                    lineNumber: 579,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -1419,7 +1460,7 @@ async function ProgramDetailPage({ params }) {
                                                 children: "$2,500"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                lineNumber: 574,
+                                                lineNumber: 595,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1427,7 +1468,7 @@ async function ProgramDetailPage({ params }) {
                                                 children: "Innovation Funds"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                lineNumber: 577,
+                                                lineNumber: 598,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1435,24 +1476,24 @@ async function ProgramDetailPage({ params }) {
                                                 children: "Per LHEAT Team"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                lineNumber: 580,
+                                                lineNumber: 601,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/programs/[slug]/page.tsx",
-                                        lineNumber: 573,
+                                        lineNumber: 594,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 572,
+                                    lineNumber: 593,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 543,
+                            lineNumber: 564,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1470,7 +1511,7 @@ async function ProgramDetailPage({ params }) {
                                                             className: "h-5 w-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                            lineNumber: 599,
+                                                            lineNumber: 620,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -1478,13 +1519,13 @@ async function ProgramDetailPage({ params }) {
                                                             children: project.county
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                            lineNumber: 600,
+                                                            lineNumber: 621,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                    lineNumber: 598,
+                                                    lineNumber: 619,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1496,13 +1537,13 @@ async function ProgramDetailPage({ params }) {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                    lineNumber: 602,
+                                                    lineNumber: 623,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                            lineNumber: 595,
+                                            lineNumber: 616,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1517,7 +1558,7 @@ async function ProgramDetailPage({ params }) {
                                                                 className: "h-4 w-4 text-primary mt-1 flex-shrink-0"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                                lineNumber: 611,
+                                                                lineNumber: 632,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
@@ -1525,18 +1566,18 @@ async function ProgramDetailPage({ params }) {
                                                                 children: project.project
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                                lineNumber: 612,
+                                                                lineNumber: 633,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                        lineNumber: 610,
+                                                        lineNumber: 631,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                    lineNumber: 609,
+                                                    lineNumber: 630,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1547,7 +1588,7 @@ async function ProgramDetailPage({ params }) {
                                                             children: "Key Activities"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                            lineNumber: 620,
+                                                            lineNumber: 641,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1555,13 +1596,13 @@ async function ProgramDetailPage({ params }) {
                                                             children: project.activities
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                            lineNumber: 623,
+                                                            lineNumber: 644,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                    lineNumber: 619,
+                                                    lineNumber: 640,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1574,7 +1615,7 @@ async function ProgramDetailPage({ params }) {
                                                                     className: "h-4 w-4 text-primary"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                                    lineNumber: 631,
+                                                                    lineNumber: 652,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1582,13 +1623,13 @@ async function ProgramDetailPage({ params }) {
                                                                     children: "Estimated Reach"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                                    lineNumber: 632,
+                                                                    lineNumber: 653,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                            lineNumber: 630,
+                                                            lineNumber: 651,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1596,13 +1637,13 @@ async function ProgramDetailPage({ params }) {
                                                             children: project.reach
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                            lineNumber: 636,
+                                                            lineNumber: 657,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                    lineNumber: 629,
+                                                    lineNumber: 650,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1612,7 +1653,7 @@ async function ProgramDetailPage({ params }) {
                                                             children: "Outcomes & Metrics"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                            lineNumber: 643,
+                                                            lineNumber: 664,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1620,30 +1661,30 @@ async function ProgramDetailPage({ params }) {
                                                             children: project.outcomes
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                            lineNumber: 646,
+                                                            lineNumber: 667,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                    lineNumber: 642,
+                                                    lineNumber: 663,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                            lineNumber: 607,
+                                            lineNumber: 628,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, idx, true, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 590,
+                                    lineNumber: 611,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 588,
+                            lineNumber: 609,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1657,7 +1698,7 @@ async function ProgramDetailPage({ params }) {
                                             children: "📊"
                                         }, void 0, false, {
                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                            lineNumber: 658,
+                                            lineNumber: 679,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -1665,7 +1706,7 @@ async function ProgramDetailPage({ params }) {
                                             children: "Download Complete Data"
                                         }, void 0, false, {
                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                            lineNumber: 659,
+                                            lineNumber: 680,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1673,13 +1714,13 @@ async function ProgramDetailPage({ params }) {
                                             children: "Get the full LHEAT Innovation Projects report with detailed information on all 12 teams and their community impact."
                                         }, void 0, false, {
                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                            lineNumber: 662,
+                                            lineNumber: 683,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 657,
+                                    lineNumber: 678,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
@@ -1705,24 +1746,24 @@ async function ProgramDetailPage({ params }) {
                                                     d: "M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                    lineNumber: 682,
+                                                    lineNumber: 703,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                lineNumber: 675,
+                                                lineNumber: 696,
                                                 columnNumber: 19
                                             }, this),
                                             "Download Full Report (PDF)"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/programs/[slug]/page.tsx",
-                                        lineNumber: 669,
+                                        lineNumber: 690,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 668,
+                                    lineNumber: 689,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1730,13 +1771,13 @@ async function ProgramDetailPage({ params }) {
                                     children: "PDF Format • Updated December 2024"
                                 }, void 0, false, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 693,
+                                    lineNumber: 714,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 656,
+                            lineNumber: 677,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1744,58 +1785,57 @@ async function ProgramDetailPage({ params }) {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                                     className: "font-bold text-foreground mb-4 text-2xl",
-                                    children: "About LHEAT Innovation Funds"
+                                    children: "About Local Action Teams"
                                 }, void 0, false, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 700,
+                                    lineNumber: 721,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "space-y-4 text-muted-foreground leading-relaxed",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            children: "The $2,500 PHIG Innovation Funds empowered 12 Local Health Equity Action Teams (LHEATs) across Kansas to design and implement community-led projects that addressed locally defined needs while adhering to funding restrictions, including prohibitions on direct food purchases."
+                                            children: "Since 2021, Local Health Equity Action Teams (LHEATs) across Kansas have each received annual budgets of $25,000 to implement community-driven projects that address local health and wellness priorities."
                                         }, void 0, false, {
                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                            lineNumber: 704,
+                                            lineNumber: 725,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            children: "Even within these parameters, LHEATs developed creative, high-impact strategies to strengthen food access, basic needs support, social connection, navigation of services, and community identity. Several teams advanced nutrition and food security indirectly by distributing gardening supplies, offering cooking demonstrations, coordinating community-led food basket initiatives, and enhancing access to resource information."
+                                            children: "These teams have completed impactful projects including Laundry of Love programs, community greenhouses and gardens, transportation initiatives, health and wellness workshops, and much more. All designed and led by community members who understand their neighbors' needs best."
                                         }, void 0, false, {
                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                            lineNumber: 711,
+                                            lineNumber: 731,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "font-semibold text-foreground",
-                                            children: "These projects demonstrate how flexible, locally controlled innovation funds can catalyze practical solutions, deepen community partnerships, and advance health equity in ways that reflect community priorities and values."
+                                            children: "These projects demonstrate how flexible, locally controlled funds can catalyze practical solutions, deepen community partnerships, and advance health equity in ways that reflect community priorities and values."
                                         }, void 0, false, {
                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                            lineNumber: 721,
+                                            lineNumber: 739,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 703,
+                                    lineNumber: 724,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 699,
+                            lineNumber: 720,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                    lineNumber: 527,
+                    lineNumber: 547,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                lineNumber: 526,
+                lineNumber: 546,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1808,7 +1848,7 @@ async function ProgramDetailPage({ params }) {
                             children: slug === "entrepreneur-council" ? "Why Join the Council?" : slug === "mentorship" ? "Why Join Our Program?" : slug === "local-action-teams" ? "Why Join a Team?" : slug === "board-members" ? "Board Responsibilities" : "Program Benefits"
                         }, void 0, false, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 736,
+                            lineNumber: 754,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1820,7 +1860,7 @@ async function ProgramDetailPage({ params }) {
                                             className: "h-5 w-5 text-secondary flex-shrink-0 mt-1"
                                         }, void 0, false, {
                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                            lineNumber: 753,
+                                            lineNumber: 771,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1828,32 +1868,32 @@ async function ProgramDetailPage({ params }) {
                                             children: benefit
                                         }, void 0, false, {
                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                            lineNumber: 754,
+                                            lineNumber: 772,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, idx, true, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 749,
+                                    lineNumber: 767,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 747,
+                            lineNumber: 765,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                    lineNumber: 735,
+                    lineNumber: 753,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                lineNumber: 734,
+                lineNumber: 752,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+            slug !== "entrepreneur-council" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "w-full py-12 sm:py-16 md:py-20 bg-background",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "mx-auto max-w-6xl px-4 sm:px-6 lg:px-8",
@@ -1863,16 +1903,16 @@ async function ProgramDetailPage({ params }) {
                             children: "Ready to Join?"
                         }, void 0, false, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 764,
-                            columnNumber: 11
+                            lineNumber: 783,
+                            columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "text-center text-muted-foreground mb-10 max-w-2xl mx-auto",
-                            children: slug === "entrepreneur-council" ? "Becoming a council member is easy. Follow these simple steps to get started." : slug === "mentorship" ? "Getting matched with a mentor is simple. Here's how to begin your journey." : slug === "local-action-teams" ? "Starting a Local Action Team in your community is straightforward. Here's the process." : slug === "board-members" ? "Joining our Board of Directors involves a nomination and selection process. Here's how it works." : "Getting involved is easy. Follow these simple steps."
+                            children: slug === "mentorship" ? "Getting matched with a mentor is simple. Here's how to begin your journey." : slug === "local-action-teams" ? "Starting a Local Action Team in your community is straightforward. Here's the process." : slug === "board-members" ? "Joining our Board of Directors involves a nomination and selection process. Here's how it works." : "Getting involved is easy. Follow these simple steps."
                         }, void 0, false, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 767,
-                            columnNumber: 11
+                            lineNumber: 786,
+                            columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6",
@@ -1880,7 +1920,7 @@ async function ProgramDetailPage({ params }) {
                                 {
                                     step: 1,
                                     title: "Express Interest",
-                                    desc: "Reach out via our contact form or email to express your interest in joining"
+                                    desc: slug === "local-action-teams" ? "Email jody@hbcat.org to express your interest in joining or starting a team" : "Reach out via our contact form or email to express your interest in joining"
                                 },
                                 {
                                     step: 2,
@@ -1908,58 +1948,78 @@ async function ProgramDetailPage({ params }) {
                                                     children: item.step
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                    lineNumber: 806,
-                                                    columnNumber: 19
+                                                    lineNumber: 826,
+                                                    columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardTitle"], {
                                                     className: "text-foreground text-lg",
                                                     children: item.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                    lineNumber: 809,
-                                                    columnNumber: 19
+                                                    lineNumber: 829,
+                                                    columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                            lineNumber: 805,
-                                            columnNumber: 17
+                                            lineNumber: 825,
+                                            columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-sm text-muted-foreground leading-relaxed",
-                                                children: item.desc
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/programs/[slug]/page.tsx",
-                                                lineNumber: 814,
-                                                columnNumber: 19
-                                            }, this)
-                                        }, void 0, false, {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: "text-sm text-muted-foreground leading-relaxed",
+                                                    children: item.desc
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/programs/[slug]/page.tsx",
+                                                    lineNumber: 834,
+                                                    columnNumber: 21
+                                                }, this),
+                                                item.step === 1 && slug === "local-action-teams" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
+                                                    size: "sm",
+                                                    variant: "outline",
+                                                    className: "mt-3 w-full",
+                                                    asChild: true,
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        href: "mailto:jody@hbcat.org ",
+                                                        children: "Email Jody Love"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/programs/[slug]/page.tsx",
+                                                        lineNumber: 844,
+                                                        columnNumber: 25
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/programs/[slug]/page.tsx",
+                                                    lineNumber: 838,
+                                                    columnNumber: 23
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                                            lineNumber: 813,
-                                            columnNumber: 17
+                                            lineNumber: 833,
+                                            columnNumber: 19
                                         }, this)
                                     ]
                                 }, item.step, true, {
                                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                                    lineNumber: 801,
-                                    columnNumber: 15
+                                    lineNumber: 821,
+                                    columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 778,
-                            columnNumber: 11
+                            lineNumber: 795,
+                            columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                    lineNumber: 763,
-                    columnNumber: 9
+                    lineNumber: 782,
+                    columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                lineNumber: 762,
-                columnNumber: 7
+                lineNumber: 781,
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "w-full py-16 sm:py-20 md:py-24 bg-gradient-to-r from-primary to-accent",
@@ -1971,7 +2031,7 @@ async function ProgramDetailPage({ params }) {
                             children: "Ready to Get Involved?"
                         }, void 0, false, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 827,
+                            lineNumber: 858,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1979,7 +2039,7 @@ async function ProgramDetailPage({ params }) {
                             children: "Join a community of entrepreneurs, mentors, and community leaders transforming rural Southeast Kansas."
                         }, void 0, false, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 830,
+                            lineNumber: 861,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
@@ -1991,34 +2051,34 @@ async function ProgramDetailPage({ params }) {
                                 children: "Get Involved"
                             }, void 0, false, {
                                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                                lineNumber: 835,
+                                lineNumber: 866,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/programs/[slug]/page.tsx",
-                            lineNumber: 834,
+                            lineNumber: 865,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/programs/[slug]/page.tsx",
-                    lineNumber: 826,
+                    lineNumber: 857,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                lineNumber: 825,
+                lineNumber: 856,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$footer$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/programs/[slug]/page.tsx",
-                lineNumber: 840,
+                lineNumber: 871,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/programs/[slug]/page.tsx",
-        lineNumber: 385,
+        lineNumber: 392,
         columnNumber: 5
     }, this);
 }

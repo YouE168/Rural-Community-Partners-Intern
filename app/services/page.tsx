@@ -19,6 +19,8 @@ const services = [
     details: [
       "Market Validation",
       "Mentorship matching & SEK Catalyst: Empowered by KU",
+      "KU School of Business Services",
+      "Micro Grant Program (administered by SEK Small Business Entrepreneurship Council)",
       "Jayhawk Consulting",
       "Redtire Consulting",
       "Access to financing resources and guidance",

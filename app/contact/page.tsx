@@ -45,7 +45,7 @@ export default function ContactPage() {
     setStatus("loading");
 
     try {
-      const response = await fetch("/api/submit-form", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

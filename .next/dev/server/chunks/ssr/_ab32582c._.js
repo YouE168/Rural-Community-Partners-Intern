@@ -867,8 +867,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 const impactStats = [
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"],
-        label: "Entrepreneurs Supported",
-        value: "150+"
+        label: "Active Members",
+        value: "100+"
     },
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$building$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Building2$3e$__["Building2"],
@@ -882,28 +882,19 @@ const impactStats = [
     },
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$award$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Award$3e$__["Award"],
-        label: "Active Mentors",
-        value: "50+"
+        label: "Local Action Teams",
+        value: "12"
     }
 ];
 const successStories = [
     {
         id: 1,
-        title: "EXAMPLE: Sarah's Bakery Success",
-        excerpt: "From home-based idea to thriving business with 5 employees",
-        fullStory: "Sarah had a passion for baking but no business experience. Through our mentorship program and technical assistance, she developed a comprehensive business plan and launched her artisan bakery. Today, her business generates over $150,000 in annual revenue and employs 5 local residents.",
-        impact: "$150K+ annual revenue",
-        region: "Lyon County",
-        image: "https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?w=500&h=300&fit=crop"
-    },
-    {
-        id: 2,
-        title: "Title",
-        excerpt: "Excerpt",
-        fullStory: "Story",
-        impact: "Impact",
-        region: "region",
-        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop"
+        title: "Community Innovation Through LHEAT",
+        excerpt: "Creative solutions addressing food security and health access",
+        fullStory: "The $2,500 PHIG Innovation Funds represent one additional opportunity teams received to pilot creative solutions within specific parameters. Even with funding restrictions—including prohibitions on direct food purchases—teams developed innovative strategies like distributing gardening supplies, offering cooking demonstrations, coordinating community-led food basket initiatives, and enhancing access to resource information.",
+        impact: "3,000+ residents reached",
+        region: "Kansas Statewide",
+        image: ""
     }
 ];
 function ImpactPage() {
@@ -911,10 +902,8 @@ function ImpactPage() {
     const [substackPosts, setSubstackPosts] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
     const [loadingPosts, setLoadingPosts] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        // Fetch Substack feed - Replace with your actual Substack integration
         const fetchSubstackPosts = async ()=>{
             try {
-                // Using the Substack RSS feed
                 const feedUrl = "https://ruralcommunitypartners.substack.com/api/v1/posts?limit=6";
                 const response = await fetch(feedUrl);
                 if (response.ok) {
@@ -922,8 +911,7 @@ function ImpactPage() {
                     setSubstackPosts(data.posts || []);
                 }
             } catch (error) {
-                console.log("[v0] Could not load Substack posts - using mock data");
-                // Mock data for demonstration
+                console.log("Could not load Substack posts - using mock data");
                 setSubstackPosts([
                     {
                         id: 1,
@@ -933,9 +921,9 @@ function ImpactPage() {
                         post_date: "2024-12-01"
                     },
                     {
-                        id: 2,
-                        title: "Tilte",
-                        subtitle: "Sub-Tittle",
+                        id: 1,
+                        title: "Title",
+                        subtitle: "Sub-Title",
                         url: "https://ruralcommunitypartners.substack.com",
                         post_date: "Post Date"
                     }
@@ -951,7 +939,7 @@ function ImpactPage() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$header$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/impact/page.tsx",
-                lineNumber: 90,
+                lineNumber: 76,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -964,7 +952,7 @@ function ImpactPage() {
                             children: "Our Impact & Stories"
                         }, void 0, false, {
                             fileName: "[project]/app/impact/page.tsx",
-                            lineNumber: 95,
+                            lineNumber: 80,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -972,22 +960,99 @@ function ImpactPage() {
                             children: "Real stories of entrepreneurs, communities, and economic transformation in Southeast Kansas"
                         }, void 0, false, {
                             fileName: "[project]/app/impact/page.tsx",
-                            lineNumber: 98,
+                            lineNumber: 83,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/impact/page.tsx",
-                    lineNumber: 94,
+                    lineNumber: 79,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/impact/page.tsx",
-                lineNumber: 93,
+                lineNumber: 78,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "w-full py-16 sm:py-20 md:py-24 bg-background",
+                className: "w-full py-12 sm:py-16 md:py-20 bg-background",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "mx-auto max-w-7xl px-4 sm:px-6 lg:px-8",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6",
+                        children: impactStats.map((stat, idx)=>{
+                            const IconComponent = stat.icon;
+                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
+                                className: "text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
+                                    className: "pt-8 pb-6",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "flex justify-center mb-4",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "p-4 bg-primary/10 rounded-full",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(IconComponent, {
+                                                    className: "h-8 w-8 text-primary"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/impact/page.tsx",
+                                                    lineNumber: 103,
+                                                    columnNumber: 25
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/impact/page.tsx",
+                                                lineNumber: 102,
+                                                columnNumber: 23
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/impact/page.tsx",
+                                            lineNumber: 101,
+                                            columnNumber: 21
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2",
+                                            children: stat.value
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/impact/page.tsx",
+                                            lineNumber: 106,
+                                            columnNumber: 21
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-sm font-medium text-muted-foreground",
+                                            children: stat.label
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/impact/page.tsx",
+                                            lineNumber: 109,
+                                            columnNumber: 21
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/app/impact/page.tsx",
+                                    lineNumber: 100,
+                                    columnNumber: 19
+                                }, this)
+                            }, idx, false, {
+                                fileName: "[project]/app/impact/page.tsx",
+                                lineNumber: 96,
+                                columnNumber: 17
+                            }, this);
+                        })
+                    }, void 0, false, {
+                        fileName: "[project]/app/impact/page.tsx",
+                        lineNumber: 92,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/app/impact/page.tsx",
+                    lineNumber: 91,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/app/impact/page.tsx",
+                lineNumber: 90,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                className: "w-full py-16 sm:py-20 md:py-24 bg-primary/5",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "mx-auto max-w-7xl px-4 sm:px-6 lg:px-8",
                     children: [
@@ -999,7 +1064,7 @@ function ImpactPage() {
                                     children: "Success Stories"
                                 }, void 0, false, {
                                     fileName: "[project]/app/impact/page.tsx",
-                                    lineNumber: 109,
+                                    lineNumber: 123,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1007,13 +1072,13 @@ function ImpactPage() {
                                     children: "Real transformation happening across Southeast Kansas"
                                 }, void 0, false, {
                                     fileName: "[project]/app/impact/page.tsx",
-                                    lineNumber: 112,
+                                    lineNumber: 126,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/impact/page.tsx",
-                            lineNumber: 108,
+                            lineNumber: 122,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1035,7 +1100,7 @@ function ImpactPage() {
                                                                     children: story.region
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/impact/page.tsx",
-                                                                    lineNumber: 134,
+                                                                    lineNumber: 147,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1043,7 +1108,7 @@ function ImpactPage() {
                                                                     children: story.title
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/impact/page.tsx",
-                                                                    lineNumber: 137,
+                                                                    lineNumber: 150,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1051,13 +1116,13 @@ function ImpactPage() {
                                                                     children: story.fullStory
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/impact/page.tsx",
-                                                                    lineNumber: 140,
+                                                                    lineNumber: 153,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/impact/page.tsx",
-                                                            lineNumber: 133,
+                                                            lineNumber: 146,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1068,7 +1133,7 @@ function ImpactPage() {
                                                                     children: "Impact"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/impact/page.tsx",
-                                                                    lineNumber: 147,
+                                                                    lineNumber: 159,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1076,122 +1141,131 @@ function ImpactPage() {
                                                                     children: story.impact
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/impact/page.tsx",
-                                                                    lineNumber: 148,
+                                                                    lineNumber: 160,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/impact/page.tsx",
-                                                            lineNumber: 146,
+                                                            lineNumber: 158,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "flex flex-wrap gap-4 pt-4",
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                                    size: "lg",
-                                                                    className: "bg-white text-gray-900 hover:bg-white/90 font-semibold",
-                                                                    onClick: ()=>setSelectedStory(story),
-                                                                    children: [
-                                                                        "Read Full Story",
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
-                                                                            className: "ml-2 h-5 w-5"
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/app/impact/page.tsx",
-                                                                            lineNumber: 161,
-                                                                            columnNumber: 27
-                                                                        }, this)
-                                                                    ]
-                                                                }, void 0, true, {
-                                                                    fileName: "[project]/app/impact/page.tsx",
-                                                                    lineNumber: 155,
-                                                                    columnNumber: 25
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                                    size: "lg",
-                                                                    variant: "outline",
-                                                                    className: "border-2 border-white text-white hover:bg-white/10 font-semibold bg-transparent",
-                                                                    asChild: true,
-                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                            children: story.id === 2 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                                                href: "/programs/local-action-teams",
+                                                                className: "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-white text-gray-900 hover:bg-white/90 h-11 px-8",
+                                                                children: [
+                                                                    "Learn More About Local Action Teams",
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
+                                                                        className: "h-5 w-5"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/impact/page.tsx",
+                                                                        lineNumber: 172,
+                                                                        columnNumber: 29
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/app/impact/page.tsx",
+                                                                lineNumber: 167,
+                                                                columnNumber: 27
+                                                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                        onClick: ()=>setSelectedStory(story),
+                                                                        className: "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-white text-gray-900 hover:bg-white/90 h-11 px-8",
+                                                                        children: [
+                                                                            "Read Full Story",
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
+                                                                                className: "h-5 w-5"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/app/impact/page.tsx",
+                                                                                lineNumber: 181,
+                                                                                columnNumber: 31
+                                                                            }, this)
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/app/impact/page.tsx",
+                                                                        lineNumber: 176,
+                                                                        columnNumber: 29
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                                                         href: "/get-support",
+                                                                        className: "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-2 border-white text-white hover:bg-white/10 bg-transparent h-11 px-8",
                                                                         children: "Get Similar Support"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/impact/page.tsx",
-                                                                        lineNumber: 169,
-                                                                        columnNumber: 27
+                                                                        lineNumber: 183,
+                                                                        columnNumber: 29
                                                                     }, this)
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/app/impact/page.tsx",
-                                                                    lineNumber: 163,
-                                                                    columnNumber: 25
-                                                                }, this)
-                                                            ]
-                                                        }, void 0, true, {
+                                                                ]
+                                                            }, void 0, true)
+                                                        }, void 0, false, {
                                                             fileName: "[project]/app/impact/page.tsx",
-                                                            lineNumber: 154,
+                                                            lineNumber: 165,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/impact/page.tsx",
-                                                    lineNumber: 132,
+                                                    lineNumber: 145,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/impact/page.tsx",
-                                                lineNumber: 131,
+                                                lineNumber: 144,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "relative min-h-[400px] md:min-h-full",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                                        src: story.image || "/placeholder.svg?height=600&width=600",
+                                                        src: story.image,
                                                         alt: story.title,
                                                         className: "absolute inset-0 w-full h-full object-cover"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/impact/page.tsx",
-                                                        lineNumber: 177,
+                                                        lineNumber: 196,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "absolute inset-0 bg-gradient-to-l from-transparent to-black/20"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/impact/page.tsx",
-                                                        lineNumber: 184,
+                                                        lineNumber: 201,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/impact/page.tsx",
-                                                lineNumber: 176,
+                                                lineNumber: 195,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/impact/page.tsx",
-                                        lineNumber: 129,
+                                        lineNumber: 143,
                                         columnNumber: 17
                                     }, this)
                                 }, story.id, false, {
                                     fileName: "[project]/app/impact/page.tsx",
-                                    lineNumber: 119,
+                                    lineNumber: 133,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/impact/page.tsx",
-                            lineNumber: 117,
+                            lineNumber: 131,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/impact/page.tsx",
-                    lineNumber: 107,
+                    lineNumber: 121,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/impact/page.tsx",
-                lineNumber: 106,
+                lineNumber: 120,
                 columnNumber: 7
             }, this),
             selectedStory && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1205,6 +1279,7 @@ function ImpactPage() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     onClick: ()=>setSelectedStory(null),
                                     className: "absolute top-4 right-4 z-10 bg-black/50 text-white rounded-full p-2 hover:bg-black/70 transition-colors",
+                                    "aria-label": "Close modal",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                                         xmlns: "http://www.w3.org/2000/svg",
                                         width: "24",
@@ -1223,7 +1298,7 @@ function ImpactPage() {
                                                 y2: "18"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/impact/page.tsx",
-                                                lineNumber: 213,
+                                                lineNumber: 230,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1233,40 +1308,40 @@ function ImpactPage() {
                                                 y2: "18"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/impact/page.tsx",
-                                                lineNumber: 214,
+                                                lineNumber: 231,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/impact/page.tsx",
-                                        lineNumber: 202,
+                                        lineNumber: 219,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/impact/page.tsx",
-                                    lineNumber: 198,
+                                    lineNumber: 214,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "h-96 overflow-hidden rounded-t-xl",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                        src: selectedStory.image || "/placeholder.svg",
+                                        src: selectedStory.image,
                                         alt: selectedStory.title,
                                         className: "w-full h-full object-cover"
                                     }, void 0, false, {
                                         fileName: "[project]/app/impact/page.tsx",
-                                        lineNumber: 218,
+                                        lineNumber: 235,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/impact/page.tsx",
-                                    lineNumber: 217,
+                                    lineNumber: 234,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/impact/page.tsx",
-                            lineNumber: 197,
+                            lineNumber: 213,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1280,7 +1355,7 @@ function ImpactPage() {
                                             children: selectedStory.region
                                         }, void 0, false, {
                                             fileName: "[project]/app/impact/page.tsx",
-                                            lineNumber: 227,
+                                            lineNumber: 244,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1288,13 +1363,13 @@ function ImpactPage() {
                                             children: selectedStory.impact
                                         }, void 0, false, {
                                             fileName: "[project]/app/impact/page.tsx",
-                                            lineNumber: 230,
+                                            lineNumber: 247,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/impact/page.tsx",
-                                    lineNumber: 226,
+                                    lineNumber: 243,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1302,7 +1377,7 @@ function ImpactPage() {
                                     children: selectedStory.title
                                 }, void 0, false, {
                                     fileName: "[project]/app/impact/page.tsx",
-                                    lineNumber: 234,
+                                    lineNumber: 251,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1310,28 +1385,28 @@ function ImpactPage() {
                                     children: selectedStory.fullStory
                                 }, void 0, false, {
                                     fileName: "[project]/app/impact/page.tsx",
-                                    lineNumber: 237,
+                                    lineNumber: 254,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/impact/page.tsx",
-                            lineNumber: 225,
+                            lineNumber: 242,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/impact/page.tsx",
-                    lineNumber: 196,
+                    lineNumber: 212,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/impact/page.tsx",
-                lineNumber: 195,
+                lineNumber: 211,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "w-full py-16 sm:py-20 md:py-24 bg-primary/5",
+                className: "w-full py-16 sm:py-20 md:py-24 bg-background",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "mx-auto max-w-7xl px-4 sm:px-6 lg:px-8",
                     children: [
@@ -1343,7 +1418,7 @@ function ImpactPage() {
                                     children: "Latest Updates & Insights"
                                 }, void 0, false, {
                                     fileName: "[project]/app/impact/page.tsx",
-                                    lineNumber: 249,
+                                    lineNumber: 265,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1351,13 +1426,13 @@ function ImpactPage() {
                                     children: "Stories, tips, and insights from our team and community"
                                 }, void 0, false, {
                                     fileName: "[project]/app/impact/page.tsx",
-                                    lineNumber: 252,
+                                    lineNumber: 268,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/impact/page.tsx",
-                            lineNumber: 248,
+                            lineNumber: 264,
                             columnNumber: 11
                         }, this),
                         loadingPosts ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1367,12 +1442,12 @@ function ImpactPage() {
                                 children: "Loading latest posts..."
                             }, void 0, false, {
                                 fileName: "[project]/app/impact/page.tsx",
-                                lineNumber: 259,
+                                lineNumber: 275,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/impact/page.tsx",
-                            lineNumber: 258,
+                            lineNumber: 274,
                             columnNumber: 13
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "grid md:grid-cols-3 gap-6 mb-8",
@@ -1386,7 +1461,7 @@ function ImpactPage() {
                                                     children: post.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/impact/page.tsx",
-                                                    lineNumber: 269,
+                                                    lineNumber: 285,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1394,13 +1469,13 @@ function ImpactPage() {
                                                     children: post.subtitle
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/impact/page.tsx",
-                                                    lineNumber: 272,
+                                                    lineNumber: 288,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/impact/page.tsx",
-                                            lineNumber: 268,
+                                            lineNumber: 284,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1412,7 +1487,7 @@ function ImpactPage() {
                                                         children: post.post_date ? new Date(post.post_date).toLocaleDateString() : "Recent"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/impact/page.tsx",
-                                                        lineNumber: 278,
+                                                        lineNumber: 294,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1426,34 +1501,34 @@ function ImpactPage() {
                                                             children: "Read More"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/impact/page.tsx",
-                                                            lineNumber: 284,
+                                                            lineNumber: 300,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/impact/page.tsx",
-                                                        lineNumber: 283,
+                                                        lineNumber: 299,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/impact/page.tsx",
-                                                lineNumber: 277,
+                                                lineNumber: 293,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/impact/page.tsx",
-                                            lineNumber: 276,
+                                            lineNumber: 292,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, post.id, true, {
                                     fileName: "[project]/app/impact/page.tsx",
-                                    lineNumber: 264,
+                                    lineNumber: 280,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/impact/page.tsx",
-                            lineNumber: 262,
+                            lineNumber: 278,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1468,28 +1543,28 @@ function ImpactPage() {
                                     children: "Read All Articles on Substack"
                                 }, void 0, false, {
                                     fileName: "[project]/app/impact/page.tsx",
-                                    lineNumber: 301,
+                                    lineNumber: 317,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/impact/page.tsx",
-                                lineNumber: 300,
+                                lineNumber: 316,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/impact/page.tsx",
-                            lineNumber: 299,
+                            lineNumber: 315,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/impact/page.tsx",
-                    lineNumber: 247,
+                    lineNumber: 263,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/impact/page.tsx",
-                lineNumber: 246,
+                lineNumber: 262,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1502,7 +1577,7 @@ function ImpactPage() {
                             children: "Your Story Could Be Next"
                         }, void 0, false, {
                             fileName: "[project]/app/impact/page.tsx",
-                            lineNumber: 316,
+                            lineNumber: 331,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1510,7 +1585,7 @@ function ImpactPage() {
                             children: "Join entrepreneurs and communities transforming rural Southeast Kansas. Let's write your success story together."
                         }, void 0, false, {
                             fileName: "[project]/app/impact/page.tsx",
-                            lineNumber: 319,
+                            lineNumber: 334,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1522,34 +1597,34 @@ function ImpactPage() {
                                 children: "Get Started Today"
                             }, void 0, false, {
                                 fileName: "[project]/app/impact/page.tsx",
-                                lineNumber: 324,
+                                lineNumber: 339,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/impact/page.tsx",
-                            lineNumber: 323,
+                            lineNumber: 338,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/impact/page.tsx",
-                    lineNumber: 315,
+                    lineNumber: 330,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/impact/page.tsx",
-                lineNumber: 314,
+                lineNumber: 329,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/impact/page.tsx",
-                lineNumber: 329,
+                lineNumber: 344,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/impact/page.tsx",
-        lineNumber: 89,
+        lineNumber: 75,
         columnNumber: 5
     }, this);
 }

@@ -5,23 +5,23 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden min-h-[500px] md:min-h-[600px]">
-      {/* Background Image - No Overlay */}
+    <section className="relative w-full overflow-hidden h-[600px] md:h-[700px]">
+      {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           src="/HomePage.jpg"
           alt="Rural community members collaborating"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_35%]"
           priority
           quality={90}
         />
-        {/*  gradient overlay */}
+        {/* gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#8FB854]/60 via-[#8FB854]/60 to-[#8FB854]/60"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24 md:py-32 min-h-[700px] md:min-h-[800px] flex items-center">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full flex items-center">
         <div className="max-w-3xl space-y-8 text-white">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-balance leading-tight drop-shadow-lg">
             Empowering Rural Communities

@@ -68,13 +68,13 @@ export default function AboutPage() {
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 Rural Community Partners supports entrepreneurs, communities,
                 and organizations across Southeast Kansas by providing
-                comprehensive resources, mentorship, and strategic guidance. We
-                help you find opportunity, connect with expertise, and engage in
-                meaningful economic development.
+                mentorship, resources, and strategic guidance. We help people
+                find opportunity, connect with expertise, and engage in
+                meaningful, locally driven economic development.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We believe that thriving rural communities are built on strong
-                local businesses, collaborative partnerships, and access to
+                We believe thriving rural communities are built on strong local
+                businesses, collaborative partnerships, and equitable access to
                 quality resources and expertise.
               </p>
             </div>
@@ -167,17 +167,6 @@ export default function AboutPage() {
                   "Project implementation",
                 ],
               },
-              {
-                title: "Connect Resources",
-                description:
-                  "We bridge the gap between rural entrepreneurs/communities and the expertise, funding, and partnerships they need.",
-                items: [
-                  "Network access",
-                  "Resource connection",
-                  "Expert consultation",
-                  "Funding navigation",
-                ],
-              },
             ].map((item, idx) => (
               <div
                 key={idx}
@@ -218,7 +207,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Approach */}
-      <section className="w-full py-16 sm:py-20 md:py-24 bg-gradient-to-r from-secondary/10 via-primary/10 to-accent/10">
+      <section className="w-full py-14 sm:py-18 md:py-22 bg-gradient-to-r from-secondary/10 via-primary/10 to-accent/10">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-8">
             Our Approach

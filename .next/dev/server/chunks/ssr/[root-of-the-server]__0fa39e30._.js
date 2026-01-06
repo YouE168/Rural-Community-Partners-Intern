@@ -742,7 +742,7 @@ function AboutPage() {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-lg text-muted-foreground leading-relaxed mb-4",
-                                        children: "Rural Community Partners supports entrepreneurs, communities, and organizations across Southeast Kansas by providing comprehensive resources, mentorship, and strategic guidance. We help you find opportunity, connect with expertise, and engage in meaningful economic development."
+                                        children: "Rural Community Partners supports entrepreneurs, communities, and organizations across Southeast Kansas by providing mentorship, resources, and strategic guidance. We help people find opportunity, connect with expertise, and engage in meaningful, locally driven economic development."
                                     }, void 0, false, {
                                         fileName: "[project]/app/about/page.tsx",
                                         lineNumber: 68,
@@ -750,7 +750,7 @@ function AboutPage() {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-lg text-muted-foreground leading-relaxed",
-                                        children: "We believe that thriving rural communities are built on strong local businesses, collaborative partnerships, and access to quality resources and expertise."
+                                        children: "We believe thriving rural communities are built on strong local businesses, collaborative partnerships, and equitable access to quality resources and expertise."
                                     }, void 0, false, {
                                         fileName: "[project]/app/about/page.tsx",
                                         lineNumber: 75,
@@ -949,16 +949,6 @@ function AboutPage() {
                                         "Partnership development",
                                         "Project implementation"
                                     ]
-                                },
-                                {
-                                    title: "Connect Resources",
-                                    description: "We bridge the gap between rural entrepreneurs/communities and the expertise, funding, and partnerships they need.",
-                                    items: [
-                                        "Network access",
-                                        "Resource connection",
-                                        "Expert consultation",
-                                        "Funding navigation"
-                                    ]
                                 }
                             ].map((item, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: `p-8 rounded-lg border-2 ${idx === 0 ? "bg-primary/5 border-primary/30" : idx === 1 ? "bg-secondary/5 border-secondary/30" : "bg-accent/5 border-accent/30"}`,
@@ -968,7 +958,7 @@ function AboutPage() {
                                             children: item.title
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.tsx",
-                                            lineNumber: 192,
+                                            lineNumber: 181,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -976,7 +966,7 @@ function AboutPage() {
                                             children: item.description
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.tsx",
-                                            lineNumber: 195,
+                                            lineNumber: 184,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -989,7 +979,7 @@ function AboutPage() {
                                                             children: "✓"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/about/page.tsx",
-                                                            lineNumber: 199,
+                                                            lineNumber: 188,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -997,24 +987,24 @@ function AboutPage() {
                                                             children: subitem
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/about/page.tsx",
-                                                            lineNumber: 210,
+                                                            lineNumber: 199,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, subitem, true, {
                                                     fileName: "[project]/app/about/page.tsx",
-                                                    lineNumber: 198,
+                                                    lineNumber: 187,
                                                     columnNumber: 21
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.tsx",
-                                            lineNumber: 196,
+                                            lineNumber: 185,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, idx, true, {
                                     fileName: "[project]/app/about/page.tsx",
-                                    lineNumber: 182,
+                                    lineNumber: 171,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
@@ -1034,7 +1024,7 @@ function AboutPage() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "w-full py-16 sm:py-20 md:py-24 bg-gradient-to-r from-secondary/10 via-primary/10 to-accent/10",
+                className: "w-full py-14 sm:py-18 md:py-22 bg-gradient-to-r from-secondary/10 via-primary/10 to-accent/10",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center",
                     children: [
@@ -1043,7 +1033,7 @@ function AboutPage() {
                             children: "Our Approach"
                         }, void 0, false, {
                             fileName: "[project]/app/about/page.tsx",
-                            lineNumber: 223,
+                            lineNumber: 212,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1051,7 +1041,7 @@ function AboutPage() {
                             children: "We take a comprehensive, collaborative approach focused on understanding your unique situation and providing tailored support. We combine expert guidance, access to networks, data-driven analysis, and accountability to create lasting opportunity and impact in rural Southeast Kansas."
                         }, void 0, false, {
                             fileName: "[project]/app/about/page.tsx",
-                            lineNumber: 226,
+                            lineNumber: 215,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1077,7 +1067,7 @@ function AboutPage() {
                                             children: item.title
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.tsx",
-                                            lineNumber: 252,
+                                            lineNumber: 241,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1085,29 +1075,29 @@ function AboutPage() {
                                             children: item.desc
                                         }, void 0, false, {
                                             fileName: "[project]/app/about/page.tsx",
-                                            lineNumber: 255,
+                                            lineNumber: 244,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, item.title, true, {
                                     fileName: "[project]/app/about/page.tsx",
-                                    lineNumber: 248,
+                                    lineNumber: 237,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/about/page.tsx",
-                            lineNumber: 233,
+                            lineNumber: 222,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/about/page.tsx",
-                    lineNumber: 222,
+                    lineNumber: 211,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/about/page.tsx",
-                lineNumber: 221,
+                lineNumber: 210,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1120,7 +1110,7 @@ function AboutPage() {
                             children: "Ready to Get Started?"
                         }, void 0, false, {
                             fileName: "[project]/app/about/page.tsx",
-                            lineNumber: 265,
+                            lineNumber: 254,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1128,7 +1118,7 @@ function AboutPage() {
                             children: "Explore our services and discover how Rural Community Partners can support your goals."
                         }, void 0, false, {
                             fileName: "[project]/app/about/page.tsx",
-                            lineNumber: 268,
+                            lineNumber: 257,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1143,12 +1133,12 @@ function AboutPage() {
                                         children: "Explore Services"
                                     }, void 0, false, {
                                         fileName: "[project]/app/about/page.tsx",
-                                        lineNumber: 274,
+                                        lineNumber: 263,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/about/page.tsx",
-                                    lineNumber: 273,
+                                    lineNumber: 262,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
@@ -1161,34 +1151,34 @@ function AboutPage() {
                                         children: "Get Support"
                                     }, void 0, false, {
                                         fileName: "[project]/app/about/page.tsx",
-                                        lineNumber: 282,
+                                        lineNumber: 271,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/about/page.tsx",
-                                    lineNumber: 276,
+                                    lineNumber: 265,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/about/page.tsx",
-                            lineNumber: 272,
+                            lineNumber: 261,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/about/page.tsx",
-                    lineNumber: 264,
+                    lineNumber: 253,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/about/page.tsx",
-                lineNumber: 263,
+                lineNumber: 252,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$footer$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/about/page.tsx",
-                lineNumber: 288,
+                lineNumber: 277,
                 columnNumber: 7
             }, this)
         ]
