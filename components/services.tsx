@@ -45,10 +45,10 @@ const services = [
   },
   {
     icon: TrendingUp,
-    title: "Technical Assistance",
+    title: "Community Investment",
     description:
-      "Expert guidance on implementation, project management, and strategic planning.",
-    href: "/services/technical-assistance",
+      "Investing time, talent, and treasure in Southeast Kansas communities through financial resources, technical support, and dedicated human capacity.",
+    href: "/services/community-investment",
     bgColor: "from-accent/15 to-accent/5",
     borderColor: "border-accent/30",
     iconBg: "bg-accent/20",

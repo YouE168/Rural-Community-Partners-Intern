@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "086affb3579d52f3ac42b39e1d8688f4",
-    "previewModeSigningKey": "efa2b8254b411f883a857f99cf256c69cf85cd0e8559048232410d8a6f180d40",
-    "previewModeEncryptionKey": "34915fb6bbf5083c1e5daadfcdd1452c4137383507422c3f61aa88e56f77cc95"
-  }
-}
+{"version":4,"routes":{"/services/entrepreneurship":{},"/services/feasibility":{},"/services/community-investment":{},"/services/community-development":{},"/services/regional":{}},"dynamicRoutes":{"/services/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/services/[slug]","routeRegex":"^\\/services\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"961674950338a8c75c1fd2ae6dd2c388","previewModeSigningKey":"bd084dfb0ba9fda3f1b0c342da86b7cfb4581d3949da74ac983b7be467667fc3","previewModeEncryptionKey":"530a0c2e3b14ed5b6c7ea7f7bf665cf283a88da5f8f1cb4d296f0143995c043c"}}

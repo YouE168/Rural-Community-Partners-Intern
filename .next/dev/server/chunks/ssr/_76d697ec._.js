@@ -472,9 +472,9 @@ const services = [
     },
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trending$2d$up$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TrendingUp$3e$__["TrendingUp"],
-        title: "Technical Assistance",
-        description: "Expert guidance on implementation, project management, and strategic planning.",
-        href: "/services/technical-assistance",
+        title: "Community Investment",
+        description: "Investing time, talent, and treasure in Southeast Kansas communities through financial resources, technical support, and dedicated human capacity.",
+        href: "/services/community-investment",
         bgColor: "from-accent/15 to-accent/5",
         borderColor: "border-accent/30",
         iconBg: "bg-accent/20",
