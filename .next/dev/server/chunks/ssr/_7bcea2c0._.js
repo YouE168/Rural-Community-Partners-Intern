@@ -1537,8 +1537,8 @@ function GetSupportPage() {
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
-                                                                        value: "technical",
-                                                                        children: "Technical Assistance"
+                                                                        value: "community-investment",
+                                                                        children: "Community Investment"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/get-support/page.tsx",
                                                                         lineNumber: 244,
@@ -1580,9 +1580,9 @@ function GetSupportPage() {
                                                         lineNumber: 260,
                                                         columnNumber: 21
                                                     }, this),
-                                                    formData.serviceType === "technical" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    formData.serviceType === "community-investment" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "text-sm text-muted-foreground mt-2",
-                                                        children: "Receive expert technical assistance for your project or initiative."
+                                                        children: "We invest time, talent, and treasure in Southeast Kansas communities through financial resources, technical support, and dedicated human capacity."
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/get-support/page.tsx",
                                                         lineNumber: 266,
@@ -1607,13 +1607,13 @@ function GetSupportPage() {
                                                                 children: "*"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/get-support/page.tsx",
-                                                                lineNumber: 277,
+                                                                lineNumber: 278,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/get-support/page.tsx",
-                                                        lineNumber: 275,
+                                                        lineNumber: 276,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$textarea$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Textarea"], {
@@ -1626,13 +1626,13 @@ function GetSupportPage() {
                                                         className: "resize-none"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/get-support/page.tsx",
-                                                        lineNumber: 279,
+                                                        lineNumber: 280,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/get-support/page.tsx",
-                                                lineNumber: 274,
+                                                lineNumber: 275,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1645,12 +1645,12 @@ function GetSupportPage() {
                                                     children: isSubmitting ? "Submitting..." : "Submit Support Request"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/get-support/page.tsx",
-                                                    lineNumber: 292,
+                                                    lineNumber: 293,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/get-support/page.tsx",
-                                                lineNumber: 291,
+                                                lineNumber: 292,
                                                 columnNumber: 17
                                             }, this)
                                         ]
@@ -1683,18 +1683,18 @@ function GetSupportPage() {
                                         children: "support@ruralcommunitypartners.org"
                                     }, void 0, false, {
                                         fileName: "[project]/app/get-support/page.tsx",
-                                        lineNumber: 309,
+                                        lineNumber: 310,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/get-support/page.tsx",
-                                lineNumber: 307,
+                                lineNumber: 308,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/get-support/page.tsx",
-                            lineNumber: 306,
+                            lineNumber: 307,
                             columnNumber: 11
                         }, this)
                     ]
@@ -1710,7 +1710,7 @@ function GetSupportPage() {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/get-support/page.tsx",
-                lineNumber: 320,
+                lineNumber: 321,
                 columnNumber: 7
             }, this)
         ]

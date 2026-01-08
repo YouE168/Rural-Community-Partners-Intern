@@ -1,189 +1,333 @@
-import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
+"use client";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+import type React from "react";
 
-export async function POST(request: NextRequest) {
-  try {
-    const body = await request.json();
-    const { formType, data, timestamp } = body;
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { AlertCircle, CheckCircle } from "lucide-react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
-    let subject = "";
-    let htmlContent = "";
+export default function CommunityInvestmentForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    organization: "",
+    organizationType: "",
+    communityInitiative: "",
+    partnershipGoals: "",
+    investmentType: "",
+    projectDetails: "",
+    timeline: "",
+    challenges: "",
+  });
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
+  const [message, setMessage] = useState("");
 
-    switch (formType) {
-      case "event-registration":
-        subject = `New Event Registration: ${data.eventTitle} - ${data.fullName}`;
-        htmlContent = `
-          <h2>New Event Registration</h2>
-          <h3>Event Details</h3>
-          <p><strong>Event:</strong> ${data.eventTitle}</p>
-          <p><strong>Event Date:</strong> ${data.eventDate}</p>
-          <p><strong>Event ID:</strong> ${data.eventId}</p>
-          
-          <h3>Registrant Information</h3>
-          <p><strong>Name:</strong> ${data.fullName}</p>
-          <p><strong>Email:</strong> ${data.email}</p>
-          <p><strong>Phone:</strong> ${data.phone}</p>
-          <p><strong>Organization:</strong> ${
-            data.organization || "Not provided"
-          }</p>
-          
-          <h3>Additional Information</h3>
-          <p><strong>Dietary Restrictions:</strong> ${
-            data.dietaryRestrictions || "None"
-          }</p>
-          <p><strong>Accessibility Needs:</strong> ${
-            data.accessibilityNeeds || "None"
-          }</p>
-          
-          <hr>
-          <p><em>Submitted: ${new Date(timestamp).toLocaleString()}</em></p>
-        `;
-        break;
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
-      case "general-support":
-        subject = `New General Support Request from ${data.fullName}`;
-        htmlContent = `
-          <h2>New General Support Request</h2>
-          <p><strong>Name:</strong> ${data.fullName}</p>
-          <p><strong>Email:</strong> ${data.email}</p>
-          <p><strong>Phone:</strong> ${data.phone}</p>
-          <p><strong>Organization:</strong> ${
-            data.organization || "Not provided"
-          }</p>
-          <p><strong>Type of Assistance:</strong> ${data.assistanceType}</p>
-          <p><strong>Description:</strong></p>
-          <p>${data.description}</p>
-          <hr>
-          <p><em>Submitted: ${new Date(timestamp).toLocaleString()}</em></p>
-        `;
-        break;
+  const handleSelectChange = (field: string, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
 
-      case "mentorship":
-        subject = `New Mentorship Application from ${data.fullName}`;
-        htmlContent = `
-          <h2>New Mentorship Program Application</h2>
-          <p><strong>Name:</strong> ${data.fullName}</p>
-          <p><strong>Email:</strong> ${data.email}</p>
-          <p><strong>Phone:</strong> ${data.phone}</p>
-          <p><strong>Business Name:</strong> ${data.businessName}</p>
-          <p><strong>Business Stage:</strong> ${data.businessStage}</p>
-          <p><strong>Industry:</strong> ${data.industry}</p>
-          <p><strong>Business Idea/Venture:</strong></p>
-          <p>${data.businessIdea}</p>
-          <p><strong>Areas Needing Mentorship:</strong></p>
-          <p>${data.mentorshipAreas}</p>
-          <hr>
-          <p><em>Submitted: ${new Date(timestamp).toLocaleString()}</em></p>
-        `;
-        break;
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
 
-      case "community-investment":
-        subject = `New Community Investment Request from ${data.fullName}`;
-        htmlContent = `
-          <h2>New Community Investment Request</h2>
-          
-          <h3>Contact Information</h3>
-          <p><strong>Name:</strong> ${data.fullName}</p>
-          <p><strong>Email:</strong> ${data.email}</p>
-          <p><strong>Phone:</strong> ${data.phone}</p>
-          
-          <h3>Organization Details</h3>
-          <p><strong>Organization:</strong> ${data.organization}</p>
-          <p><strong>Organization Type:</strong> ${data.organizationType}</p>
-          
-          <h3>Initiative Information</h3>
-          <p><strong>Initiative Title:</strong> ${data.initiativeTitle}</p>
-          <p><strong>Type of Investment Needed:</strong> ${
-            data.investmentType
-          }</p>
-          <p><strong>Timeline:</strong> ${data.timeline}</p>
-          
-          <h3>Initiative Description</h3>
-          <p>${data.initiativeDescription}</p>
-          
-          <h3>Partnership Goals</h3>
-          <p>${data.partnershipGoals}</p>
-          
-          <h3>Key Challenges or Questions</h3>
-          <p>${data.challenges}</p>
-          
-          <hr>
-          <p><em>Submitted: ${new Date(timestamp).toLocaleString()}</em></p>
-        `;
-        break;
+    try {
+      const response = await fetch("/api/submit-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          formType: "community-investment",
+          data: formData,
+          timestamp: new Date().toISOString(),
+        }),
+      });
 
-      case "technical":
-        subject = `New Technical Assistance Request from ${data.fullName}`;
-        htmlContent = `
-          <h2>New Technical Assistance Request</h2>
-          <p><strong>Name:</strong> ${data.fullName}</p>
-          <p><strong>Email:</strong> ${data.email}</p>
-          <p><strong>Phone:</strong> ${data.phone}</p>
-          <p><strong>Organization:</strong> ${data.organization}</p>
-          <p><strong>Project Title:</strong> ${data.projectTitle}</p>
-          <p><strong>Type of Assistance:</strong> ${data.assistanceType}</p>
-          <p><strong>Timeline:</strong> ${data.timeline}</p>
-          <p><strong>Project Description:</strong></p>
-          <p>${data.projectDescription}</p>
-          <p><strong>Key Challenges/Questions:</strong></p>
-          <p>${data.challenges}</p>
-          <hr>
-          <p><em>Submitted: ${new Date(timestamp).toLocaleString()}</em></p>
-        `;
-        break;
-
-      case "contact":
-        subject = `New Contact Form Message from ${data.name}`;
-        htmlContent = `
-          <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${data.name}</p>
-          <p><strong>Email:</strong> ${data.email}</p>
-          <p><strong>Phone:</strong> ${data.phone || "Not provided"}</p>
-          <p><strong>Subject:</strong> ${data.subject}</p>
-          <p><strong>Message:</strong></p>
-          <p>${data.message}</p>
-          <hr>
-          <p><em>Submitted: ${new Date(timestamp).toLocaleString()}</em></p>
-        `;
-        break;
-
-      default:
-        return NextResponse.json(
-          { success: false, message: "Invalid form type" },
-          { status: 400 }
+      if (response.ok) {
+        setStatus("success");
+        setMessage(
+          "Thank you! Your community investment request has been submitted. We'll review your needs and be in touch within 3-5 business days."
         );
-    }
-
-    const { data: emailData, error } = await resend.emails.send({
-      from: "Rural Community Partners <onboarding@resend.dev>",
-      to: ["jody@hbcat.org"],
-      replyTo: data.email,
-      subject: subject,
-      html: htmlContent,
-    });
-
-    if (error) {
-      console.error("Error sending email:", error);
-      return NextResponse.json(
-        { success: false, message: "Error sending email" },
-        { status: 500 }
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          organization: "",
+          organizationType: "",
+          communityInitiative: "",
+          partnershipGoals: "",
+          investmentType: "",
+          projectDetails: "",
+          timeline: "",
+          challenges: "",
+        });
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        setStatus("error");
+        setMessage(
+          "There was an error submitting your request. Please try again."
+        );
+      }
+    } catch (error) {
+      setStatus("error");
+      setMessage(
+        "There was an error submitting your request. Please try again."
       );
     }
+  };
 
-    console.log("Form submission:", { formType, data, timestamp });
-    console.log("Email sent successfully:", emailData);
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Request Community Investment</CardTitle>
+      </CardHeader>
+      <CardContent>
+        {status === "success" && (
+          <Alert className="mb-6 border-green-200 bg-green-50">
+            <CheckCircle className="h-4 w-4 text-green-600" />
+            <AlertDescription className="text-green-800">
+              {message}
+            </AlertDescription>
+          </Alert>
+        )}
 
-    return NextResponse.json(
-      { success: true, message: "Form submitted successfully" },
-      { status: 200 }
-    );
-  } catch (error) {
-    console.error("Error processing form:", error);
-    return NextResponse.json(
-      { success: false, message: "Error processing form" },
-      { status: 500 }
-    );
-  }
+        {status === "error" && (
+          <Alert
+            className="mb-6 border-red-200 bg-red-50"
+            variant="destructive"
+          >
+            <AlertCircle className="h-4 w-4" />
+            <AlertDescription>{message}</AlertDescription>
+          </Alert>
+        )}
+
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="space-y-2">
+              <Label htmlFor="name">Full Name *</Label>
+              <Input
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                placeholder="John Doe"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="email">Email Address *</Label>
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                placeholder="john@example.com"
+              />
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="space-y-2">
+              <Label htmlFor="phone">Phone Number *</Label>
+              <Input
+                id="phone"
+                name="phone"
+                type="tel"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                placeholder="(555) 123-4567"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="organization">Organization Name *</Label>
+              <Input
+                id="organization"
+                name="organization"
+                value={formData.organization}
+                onChange={handleChange}
+                required
+                placeholder="Nonprofit, coalition, government, or community group"
+              />
+              <p className="text-xs text-muted-foreground">
+                Include nonprofits, coalitions, local governments, and informal
+                community groups
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="organizationType">Type of Organization *</Label>
+            <Select
+              value={formData.organizationType}
+              onValueChange={(value) =>
+                handleSelectChange("organizationType", value)
+              }
+            >
+              <SelectTrigger id="organizationType">
+                <SelectValue placeholder="Select organization type" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="nonprofit">Nonprofit</SelectItem>
+                <SelectItem value="coalition">Community Coalition</SelectItem>
+                <SelectItem value="government">Local Government</SelectItem>
+                <SelectItem value="informal">
+                  Informal Community Group
+                </SelectItem>
+                <SelectItem value="other">Other</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="communityInitiative">
+              Community Initiative or Partnership Opportunity *
+            </Label>
+            <Input
+              id="communityInitiative"
+              name="communityInitiative"
+              value={formData.communityInitiative}
+              onChange={handleChange}
+              required
+              placeholder="Name of your initiative or partnership"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="partnershipGoals">
+              Partnership Goals or Outcomes Sought *
+            </Label>
+            <Textarea
+              id="partnershipGoals"
+              name="partnershipGoals"
+              value={formData.partnershipGoals}
+              onChange={handleChange}
+              required
+              placeholder="What are you hoping to achieve through this partnership?"
+              rows={3}
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="investmentType">
+              Type of Community Investment Needed *
+            </Label>
+            <Select
+              value={formData.investmentType}
+              onValueChange={(value) =>
+                handleSelectChange("investmentType", value)
+              }
+            >
+              <SelectTrigger id="investmentType">
+                <SelectValue placeholder="Select investment type" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="planning">
+                  Strategic Planning & Visioning
+                </SelectItem>
+                <SelectItem value="grant">
+                  Grant Development & Funding Strategy
+                </SelectItem>
+                <SelectItem value="fiscal">
+                  Fiscal Administration & Compliance
+                </SelectItem>
+                <SelectItem value="capacity">
+                  Capacity Building & Organizational Development
+                </SelectItem>
+                <SelectItem value="facilitation">
+                  Facilitation & Coalition Coordination
+                </SelectItem>
+                <SelectItem value="staffing">
+                  Staffing & Human Capacity Support
+                </SelectItem>
+                <SelectItem value="data">
+                  Data, Evaluation & Learning
+                </SelectItem>
+                <SelectItem value="other">Other</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="projectDetails">
+              Describe Your Project or Initiative *
+            </Label>
+            <Textarea
+              id="projectDetails"
+              name="projectDetails"
+              value={formData.projectDetails}
+              onChange={handleChange}
+              required
+              placeholder="Provide details about your project, goals, and current status..."
+              rows={4}
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="timeline">Timeline for Investment Needed *</Label>
+            <Select
+              value={formData.timeline}
+              onValueChange={(value) => handleSelectChange("timeline", value)}
+            >
+              <SelectTrigger id="timeline">
+                <SelectValue placeholder="Select timeline" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="immediate">
+                  Immediate (within 2 weeks)
+                </SelectItem>
+                <SelectItem value="soon">Soon (within 1 month)</SelectItem>
+                <SelectItem value="flexible">Flexible</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="challenges">Key Challenges or Questions *</Label>
+            <Textarea
+              id="challenges"
+              name="challenges"
+              value={formData.challenges}
+              onChange={handleChange}
+              required
+              placeholder="What specific challenges are you facing? What questions do you need answered?"
+              rows={4}
+            />
+          </div>
+
+          <Button
+            type="submit"
+            disabled={status === "loading"}
+            className="w-full"
+          >
+            {status === "loading" ? "Submitting..." : "Submit Request"}
+          </Button>
+        </form>
+      </CardContent>
+    </Card>
+  );
 }

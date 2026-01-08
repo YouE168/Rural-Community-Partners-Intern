@@ -241,8 +241,8 @@ export default function GetSupportPage() {
                       <SelectItem value="mentorship">
                         Mentorship Program
                       </SelectItem>
-                      <SelectItem value="technical">
-                        Technical Assistance
+                      <SelectItem value="community-investment">
+                        Community Investment
                       </SelectItem>
                       <SelectItem value="microgrant">
                         SBEC Micro Grant Program
@@ -262,10 +262,11 @@ export default function GetSupportPage() {
                       entrepreneurial journey.
                     </p>
                   )}
-                  {formData.serviceType === "technical" && (
+                  {formData.serviceType === "community-investment" && (
                     <p className="text-sm text-muted-foreground mt-2">
-                      Receive expert technical assistance for your project or
-                      initiative.
+                      We invest time, talent, and treasure in Southeast Kansas
+                      communities through financial resources, technical
+                      support, and dedicated human capacity.
                     </p>
                   )}
                 </div>

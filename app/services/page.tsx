@@ -44,19 +44,23 @@ const services = [
     whoItsFor: "Entrepreneurs, community organizations, and local governments",
   },
   {
-    slug: "technical-assistance",
-    title: "Technical Assistance",
-    description: "Supporting nonprofits and coalitions in Southeast Kansas",
+    slug: "community-investment",
+    title: "Community Investment",
+    description:
+      "Investing time, talent, and treasure in Southeast Kansas communities",
     details: [
-      "Bottom-up community-driven planning with residents and stakeholders",
-      "SWOT analysis facilitation",
-      "Priority identification based on lived experience and data",
-      "Action plan development",
-      "Resource acquisition support",
-      "Coalition and nonprofit capacity building",
+      "Strategic Planning & Visioning",
+      "Grant Development & Funding Strategy",
+      "Fiscal Administration & Compliance",
+      "Capacity Building & Organizational Development",
+      "Facilitation & Coalition Coordination",
+      "Staffing & Human Capacity Support",
+      "Data, Evaluation & Learning",
+      "Grant funding and pass-through dollars",
+      "Fiscal sponsorship and administration",
     ],
     whoItsFor:
-      "Nonprofits, coalitions, and community organizations in Southeast Kansas's 4-county region",
+      "Nonprofits, community coalitions, local governments, and informal community groups in Southeast Kansas",
   },
   {
     slug: "community-development",

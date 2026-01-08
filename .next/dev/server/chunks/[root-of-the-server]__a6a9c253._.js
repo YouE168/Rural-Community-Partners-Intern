@@ -117,12 +117,12 @@ async function POST(request) {
         `;
                 break;
             case "community-investment":
-                subject = `New Community Investment Request from ${data.fullName}`;
+                subject = `New Community Investment Request from ${data.name}`;
                 htmlContent = `
           <h2>New Community Investment Request</h2>
           
           <h3>Contact Information</h3>
-          <p><strong>Name:</strong> ${data.fullName}</p>
+          <p><strong>Name:</strong> ${data.name}</p>
           <p><strong>Email:</strong> ${data.email}</p>
           <p><strong>Phone:</strong> ${data.phone}</p>
           
@@ -131,14 +131,14 @@ async function POST(request) {
           <p><strong>Organization Type:</strong> ${data.organizationType}</p>
           
           <h3>Initiative Information</h3>
-          <p><strong>Initiative Title:</strong> ${data.initiativeTitle}</p>
+          <p><strong>Community Initiative:</strong> ${data.communityInitiative}</p>
           <p><strong>Type of Investment Needed:</strong> ${data.investmentType}</p>
           <p><strong>Timeline:</strong> ${data.timeline}</p>
           
-          <h3>Initiative Description</h3>
-          <p>${data.initiativeDescription}</p>
+          <h3>Project Details</h3>
+          <p>${data.projectDetails}</p>
           
-          <h3>Partnership Goals</h3>
+          <h3>Partnership Goals or Outcomes Sought</h3>
           <p>${data.partnershipGoals}</p>
           
           <h3>Key Challenges or Questions</h3>

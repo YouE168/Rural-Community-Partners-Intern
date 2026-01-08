@@ -37,7 +37,7 @@ type ActionTeam = {
 type ProgramMember = CouncilMember | Mentor | ActionTeam;
 
 // LHEAT Project Data
-const lheatProjects = [
+const allLheatProjects = [
   {
     county: "Barton County",
     issue: "Food insecurity",
@@ -150,6 +150,16 @@ const lheatProjects = [
   },
 ];
 
+// Filter to only show Bourbon, Crawford, Labette, and Montgomery counties
+const lheatProjects = allLheatProjects.filter((project) =>
+  [
+    "Bourbon County",
+    "Crawford County",
+    "Labette County",
+    "Montgomery County",
+  ].includes(project.county)
+);
+
 // Program details object
 const programDetails: {
   [key: string]: {
@@ -178,8 +188,7 @@ const programDetails: {
       "Recognition and community visibility",
       "Support for community health and economic initiatives",
     ],
-    whoItsFor:
-      "Established entrepreneurs, business owners, and community leaders interested in peer networking and collaborative growth",
+    whoItsFor: "Council membership is by application and appointment only",
     commitment: "",
     members: [
       {
@@ -553,7 +562,8 @@ export default async function ProgramDetailPage({ params }: PageProps) {
                 Explore the impact of Local Health Equity Action Teams (LHEATs)
                 across Kansas. The $2,500 PHIG Innovation Funds represent one
                 additional opportunity teams received to pilot creative
-                solutions. These 12 community-led projects reached an estimated{" "}
+                solutions. These 4 highlighted community-led projects reached an
+                estimated{" "}
                 <span className="font-bold text-primary">3,000+ residents</span>{" "}
                 through innovative solutions addressing food security, health
                 access, and community well-being.
@@ -593,13 +603,13 @@ export default async function ProgramDetailPage({ params }: PageProps) {
               <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 bg-gradient-to-br from-accent/5 to-secondary/5 sm:col-span-2 lg:col-span-1">
                 <CardContent className="pt-8 pb-6">
                   <div className="text-6xl font-bold bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent mb-3">
-                    $2,500
+                    $26,200
                   </div>
                   <p className="text-lg font-semibold text-foreground mb-1">
-                    Innovation Funds
+                    Total Innovation Funds
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    Per LHEAT Team
+                    For Selected Counties
                   </p>
                 </CardContent>
               </Card>

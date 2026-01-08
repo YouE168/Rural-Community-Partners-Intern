@@ -1,19 +1,17 @@
-[00:00:00.587] Server  LOG      ✓ Ready in 397ms
-[00:00:05.569] Server  WARN    Image with src "/HomePage.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+[00:00:00.606] Server  LOG      ✓ Ready in 415ms
+[00:00:04.888] Server  WARN    Image with src "/HomePage.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[00:00:05.623] Server  WARN     ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
-[00:00:05.989] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:06.123] Browser WARN    Image with src "/HomePage.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+[00:00:04.938] Server  WARN     ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
+[00:00:05.309] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:05.447] Browser WARN    Image with src "/HomePage.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[00:00:06.123] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:06.123] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:06.123] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767666378825}
-[00:00:13.712] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/programs color: rgb(120, 120, 120) color: inherit {"dp":"/programs","o":"http://localhost:3000/programs","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767666386414}
-[00:00:18.159] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/programs/entrepreneur-council color: rgb(120, 120, 120) color: inherit {"dp":"/programs/[slug]","o":"http://localhost:3000/programs/entrepreneur-council","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767666390862}
-[00:01:14.942] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/get-support color: rgb(120, 120, 120) color: inherit {"dp":"/get-support","o":"http://localhost:3000/get-support","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767666447644}
-[00:45:11.106] Browser LOG     Submitting form data: {"county":"N?a","email":"kry@gmail.com","message":"Testing","name":"You E ","organization":"N/A","phone":"123","serviceType":"mentorship"}
-[00:45:11.710] Server  LOG     Form submission: {}
-[00:45:11.710] Server  LOG     Email sent successfully: {}
-[00:45:53.286] Browser LOG     Response status: 200
-[00:45:53.286] Browser LOG     Response headers: {}
-[00:45:53.286] Browser LOG     Response data: {"message":"Form submitted successfully","success":true}
+[00:00:05.447] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:05.447] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:05.447] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767841637092}
+[00:00:09.538] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/get-support color: rgb(120, 120, 120) color: inherit {"dp":"/get-support","o":"http://localhost:3000/get-support","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767841641184}
+[00:00:54.703] Browser LOG     Submitting form data: {"county":"N/A","email":"kry.ue59@gmail.com","message":"Testing","name":"You E","organization":"N/A","phone":"123-456-7890","serviceType":"community-investment"}
+[00:00:55.310] Server  LOG     Form submission: {}
+[00:00:55.310] Server  LOG     Email sent successfully: {}
+[00:00:57.624] Browser LOG     Response status: 200
+[00:00:57.625] Browser LOG     Response headers: {}
+[00:00:57.625] Browser LOG     Response data: {"message":"Form submitted successfully","success":true}

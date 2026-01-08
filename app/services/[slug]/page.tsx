@@ -89,44 +89,48 @@ const serviceDetails = {
       },
     ],
   },
-  "technical-assistance": {
-    title: "Technical Assistance",
-    hero: "Supporting Nonprofits & Coalitions",
+  "community-investment": {
+    title: "Community Investment",
+    hero: "Investing in Southeast Kansas Communities",
     description:
-      "We support 4 counties in Southeast Kansas with technical assistance to navigate the complex and difficult challenges of coalition and nonprofit work.",
+      "RCP does not 'assist' communities. RCP invests in them. We invest in people, organizations, and coalitions across Southeast Kansas by providing financial resources, hands-on technical support, and dedicated human capacity.",
     overview:
-      "We invest our time, talent, and treasure in the communities because when each of us succeeds, we all succeed. Our approach is bottom-up, driven by residents with lived experience, local organizations and stakeholders, public health professionals, business owners, elected officials, and more.",
+      "Our approach goes beyond traditional technical assistance. We walk alongside community coalitions and nonprofits, contributing time, talent, and treasure to strengthen local leadership, build sustainable systems, and turn community vision into action. This investment may include planning and facilitation, grant writing and fiscal management, staffing support, mentorship, capital access, data and evaluation, and long-term partnership through implementation.",
     highlights: [
-      "Community-Driven Planning",
-      "SWOT Analysis",
-      "Priority Identification",
-      "Action Plan Development",
-      "Resource Acquisition",
+      "Strategic Planning & Visioning",
+      "Grant Development & Funding Strategy",
+      "Fiscal Administration & Compliance",
+      "Capacity Building & Organizational Development",
+      "Facilitation & Coalition Coordination",
+      "Staffing & Human Capacity Support",
+      "Data, Evaluation & Learning",
+      "Grant Funding & Pass-Through Dollars",
+      "Fiscal Sponsorship",
     ],
     process: [
       {
         step: 1,
-        title: "Community Engagement",
+        title: "Financial Investment",
         description:
-          "Residents with lived experience, local organizations, stakeholders, public health, business owners, and elected officials come together.",
+          "Grant funding and pass-through dollars, micro-grants and program support, fiscal sponsorship and administration.",
       },
       {
         step: 2,
-        title: "SWOT Analysis",
+        title: "Technical Investment",
         description:
-          "Complete a comprehensive SWOT analysis to understand community strengths, weaknesses, opportunities, and threats.",
+          "Planning, facilitation, and strategy, grant development and compliance, program design, data, and evaluation.",
       },
       {
         step: 3,
-        title: "Consensus Building",
+        title: "Human Investment",
         description:
-          "Reach consensus on top priorities based on lived experience and data, then develop action plans.",
+          "Staff time embedded in communities, mentorship and leadership development, coalition coordination and relationship-building.",
       },
       {
         step: 4,
-        title: "Resource Support",
+        title: "Long-term Partnership",
         description:
-          "Work together to obtain the resources needed to address identified priorities.",
+          "We walk alongside you through implementation, providing ongoing support and accountability.",
       },
     ],
   },
