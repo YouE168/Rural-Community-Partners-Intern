@@ -40,7 +40,7 @@ export default function GetSupportPage() {
     try {
       console.log("Submitting form data:", formData);
 
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/api/submit-form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -308,10 +308,10 @@ export default function GetSupportPage() {
             <p className="text-muted-foreground">
               Questions? Email us at{" "}
               <a
-                href="mailto:support@ruralcommunitypartners.org"
+                href="mailto:jody@hbcat.org "
                 className="text-primary hover:underline"
               >
-                support@ruralcommunitypartners.org
+                jody@hbcat.org
               </a>
             </p>
           </div>
