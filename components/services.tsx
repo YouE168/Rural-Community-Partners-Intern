@@ -54,17 +54,7 @@ const services = [
     iconBg: "bg-accent/20",
     iconColor: "text-accent",
   },
-  {
-    icon: MapPin,
-    title: "Community Development",
-    description:
-      "Building strong local economies through collaborative initiatives.",
-    href: "/services/community-development",
-    bgColor: "from-primary/15 via-accent/10 to-primary/5",
-    borderColor: "border-primary/20",
-    iconBg: "bg-primary/20",
-    iconColor: "text-primary",
-  },
+
   {
     icon: Users,
     title: "Regional Initiatives",

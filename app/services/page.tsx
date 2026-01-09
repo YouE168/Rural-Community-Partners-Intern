@@ -62,20 +62,7 @@ const services = [
     whoItsFor:
       "Nonprofits, community coalitions, local governments, and informal community groups in Southeast Kansas",
   },
-  {
-    slug: "community-development",
-    title: "Community Development",
-    description: "Building strong local economies through collaboration",
-    details: [
-      "Community visioning and strategic planning",
-      "Economic development initiatives",
-      "Local partnership development",
-      "Infrastructure and asset assessment",
-      "CDBG grant support (playgrounds, trails, community facilities)",
-      "Sustainable development projects",
-    ],
-    whoItsFor: "Communities, municipalities, and regional organizations",
-  },
+
   {
     slug: "regional",
     title: "Regional Initiatives",
