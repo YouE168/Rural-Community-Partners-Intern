@@ -19,10 +19,9 @@ const services = [
     details: [
       "Market Validation",
       "Mentorship matching & SEK Catalyst: Empowered by KU",
-      "KU School of Business Services",
+      "KU School of Business Jayhawk Consulting",
+      "KU School of Business Redtire Consulting",
       "Micro Grant Program (administered by SEK Small Business Entrepreneurship Council)",
-      "Jayhawk Consulting",
-      "Redtire Consulting",
       "Access to financing resources and guidance",
       "Training workshops and skill development",
       "Ongoing support and accountability",

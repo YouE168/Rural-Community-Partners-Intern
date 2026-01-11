@@ -12,12 +12,12 @@ const serviceDetails = {
     description:
       "We believe in the power of entrepreneurship to transform communities. Our comprehensive support, including partnerships with KU School of Business, helps aspiring and existing entrepreneurs navigate the journey from idea to thriving business.",
     overview:
-      "Whether you're in the ideation phase or looking to scale an existing business, our entrepreneurship support provides the guidance, resources, and mentorship you need to succeed. Through our partnerships with KU School of Business programs, you gain access to expert consulting and specialized support.",
+      "Whether you're in the ideation phase or looking to scale an existing business, our entrepreneurship support provides the guidance, resources, and mentorship you need to succeed.",
     highlights: [
       "Market Validation",
       "Mentorship Matching & SEK Catalyst: Empowered by KU",
-      "Jayhawk Consulting",
-      "Redtire Consulting",
+      "KU School of Business Jayhawk Consulting",
+      "KU School of Business Redtire Consulting",
       "Financing Guidance",
       "Training & Skills Development",
       "Ongoing Accountability Support",
@@ -37,9 +37,9 @@ const serviceDetails = {
       },
       {
         step: 3,
-        title: "Mentorship & KU Partnership Matching",
+        title: "Connect to Resources & Capital",
         description:
-          "Connect with experienced mentors and KU School of Business programs aligned with your needs.",
+          "We connect you with funding opportunities, financing resources, and capital access to support your business growth.",
       },
       {
         step: 4,
@@ -110,21 +110,21 @@ const serviceDetails = {
     process: [
       {
         step: 1,
-        title: "Financial Investment",
+        title: "Human Investment",
         description:
-          "Grant funding and pass-through dollars, micro-grants and program support, fiscal sponsorship and administration.",
+          "Staff time embedded in communities, mentorship and leadership development, coalition coordination and relationship-building.",
       },
       {
         step: 2,
-        title: "Technical Investment",
+        title: "Strategic Investment",
         description:
           "Planning, facilitation, and strategy, grant development and compliance, program design, data, and evaluation.",
       },
       {
         step: 3,
-        title: "Human Investment",
+        title: "Financial Investment",
         description:
-          "Staff time embedded in communities, mentorship and leadership development, coalition coordination and relationship-building.",
+          "Grant funding and pass-through dollars, micro-grants and program support, fiscal sponsorship and administration.",
       },
       {
         step: 4,

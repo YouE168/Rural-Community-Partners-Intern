@@ -127,7 +127,7 @@ export default function ContactPage() {
                     className="w-full bg-transparent"
                   >
                     <a
-                      href="https://www.google.com/maps/search/Southeast+Kansas"
+                      href="https://www.google.com/maps/place/104+N+National+Ave,+Fort+Scott,+KS+66701/@37.8430977,-94.7075429,17z/data=!3m1!4b1!4m6!3m5!1s0x87c7a0355c756f75:0x7e8fa52f2c2e809c!8m2!3d37.8430977!4d-94.7075429!16s%2Fg%2F11sghrjlqd?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoKLDEwMDc5MjA3MUgBUAM%3D"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2"

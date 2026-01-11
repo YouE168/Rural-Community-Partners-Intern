@@ -308,7 +308,6 @@ const programDetails: {
         image: "/DiannGambill-headshot.jpg",
         role: "Local Action Team",
       },
-
       {
         name: "Linda Follett",
         business: "Montgomery LHEAT",
@@ -459,98 +458,100 @@ export default async function ProgramDetailPage({ params }: PageProps) {
       </section>
 
       {/* Members/Participants - 3 PER ROW */}
-      <section className="w-full py-12 sm:py-16 md:py-20 bg-primary/5">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h3 className="text-3xl font-bold text-foreground mb-3">
-              {slug === "entrepreneur-council"
-                ? "Meet Our Council Members"
-                : slug === "mentorship"
-                ? "Connect with Our Mentors"
-                : slug === "local-action-teams"
-                ? "Active Local Action Teams"
-                : slug === "board-members"
-                ? "Meet Our Board"
-                : "Team Members"}
-            </h3>
-            {slug === "entrepreneur-council" && (
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Dedicated community leaders driving economic development and
-                entrepreneurship across Southeast Kansas
-              </p>
-            )}
-          </div>
+      {slug !== "mentorship" && (
+        <section className="w-full py-12 sm:py-16 md:py-20 bg-primary/5">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h3 className="text-3xl font-bold text-foreground mb-3">
+                {slug === "entrepreneur-council"
+                  ? "Meet Our Council Members"
+                  : slug === "mentorship"
+                  ? "Connect with Our Mentors"
+                  : slug === "local-action-teams"
+                  ? "Active Local Action Teams"
+                  : slug === "board-members"
+                  ? "Meet Our Board"
+                  : "Team Members"}
+              </h3>
+              {slug === "entrepreneur-council" && (
+                <p className="text-muted-foreground max-w-2xl mx-auto">
+                  Dedicated community leaders driving economic development and
+                  entrepreneurship across Southeast Kansas
+                </p>
+              )}
+            </div>
 
-          {/* 3 columns grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {program.members.map((member, idx) => (
-              <Card
-                key={idx}
-                className="text-center overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2"
-              >
-                <CardContent className="pt-6 pb-5 px-4">
-                  <div className="mb-4 flex justify-center">
-                    {"image" in member && member.image ? (
-                      <div className="relative group">
-                        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-accent to-secondary opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-300 animate-pulse" />
+            {/* 3 columns grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {program.members.map((member, idx) => (
+                <Card
+                  key={idx}
+                  className="text-center overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2"
+                >
+                  <CardContent className="pt-6 pb-5 px-4">
+                    <div className="mb-4 flex justify-center">
+                      {"image" in member && member.image ? (
+                        <div className="relative group">
+                          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-accent to-secondary opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-300 animate-pulse" />
 
-                        <div className="relative w-32 h-32 rounded-full p-1 bg-gradient-to-br from-primary via-accent to-secondary">
-                          <div className="w-full h-full rounded-full p-1 bg-background overflow-hidden">
-                            <img
-                              src={member.image}
-                              alt={member.name}
-                              className="w-full h-full rounded-full object-cover ring-4 ring-background shadow-xl group-hover:scale-105 transition-transform duration-300"
-                              style={{
-                                objectPosition: "center 20%",
-                              }}
-                            />
+                          <div className="relative w-32 h-32 rounded-full p-1 bg-gradient-to-br from-primary via-accent to-secondary">
+                            <div className="w-full h-full rounded-full p-1 bg-background overflow-hidden">
+                              <img
+                                src={member.image}
+                                alt={member.name}
+                                className="w-full h-full rounded-full object-cover ring-4 ring-background shadow-xl group-hover:scale-105 transition-transform duration-300"
+                                style={{
+                                  objectPosition: "center 20%",
+                                }}
+                              />
+                            </div>
+                          </div>
+
+                          {/* DYNAMIC BADGE */}
+                          <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold shadow-lg whitespace-nowrap">
+                            {slug === "entrepreneur-council"
+                              ? "Council Member"
+                              : slug === "mentorship"
+                              ? "Mentor"
+                              : slug === "local-action-teams"
+                              ? "Team Leader"
+                              : slug === "board-members"
+                              ? "Board Member"
+                              : "Member"}
                           </div>
                         </div>
-
-                        {/* DYNAMIC BADGE */}
-                        <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold shadow-lg whitespace-nowrap">
-                          {slug === "entrepreneur-council"
-                            ? "Council Member"
-                            : slug === "mentorship"
-                            ? "Mentor"
-                            : slug === "local-action-teams"
-                            ? "Team Leader"
-                            : slug === "board-members"
-                            ? "Board Member"
-                            : "Member"}
+                      ) : (
+                        <div className="text-5xl p-4 bg-primary/10 rounded-full">
+                          {member.icon}
                         </div>
-                      </div>
-                    ) : (
-                      <div className="text-5xl p-4 bg-primary/10 rounded-full">
-                        {member.icon}
-                      </div>
-                    )}
-                  </div>
+                      )}
+                    </div>
 
-                  <div className="relative mb-2">
-                    <h4 className="font-bold text-lg text-foreground">
-                      {member.name}
-                    </h4>
-                    <div className="h-0.5 w-12 bg-gradient-to-r from-primary to-accent mx-auto mt-1.5 rounded-full" />
-                  </div>
+                    <div className="relative mb-2">
+                      <h4 className="font-bold text-lg text-foreground">
+                        {member.name}
+                      </h4>
+                      <div className="h-0.5 w-12 bg-gradient-to-r from-primary to-accent mx-auto mt-1.5 rounded-full" />
+                    </div>
 
-                  <p className="text-sm text-muted-foreground font-medium leading-tight">
-                    {"business" in member
-                      ? member.business
-                      : "expertise" in member
-                      ? member.expertise
-                      : "community" in member
-                      ? member.community
-                      : ""}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+                    <p className="text-sm text-muted-foreground font-medium leading-tight">
+                      {"business" in member
+                        ? member.business
+                        : "expertise" in member
+                        ? member.expertise
+                        : "community" in member
+                        ? member.community
+                        : ""}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
-      {/* ✅ LHEAT INNOVATION PROJECTS - FOR LOCAL ACTION TEAMS */}
+      {/* LHEAT INNOVATION PROJECTS - FOR LOCAL ACTION TEAMS */}
       {slug === "local-action-teams" && (
         <section className="w-full py-12 sm:py-16 md:py-20 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -745,7 +746,6 @@ export default async function ProgramDetailPage({ params }: PageProps) {
                   much more. All designed and led by community members who
                   understand their neighbors' needs best.
                 </p>
-
                 <p>
                   These projects demonstrate how flexible, locally controlled
                   funds can catalyze practical solutions, deepen community
@@ -851,7 +851,7 @@ export default async function ProgramDetailPage({ params }: PageProps) {
                         className="mt-3 w-full"
                         asChild
                       >
-                        <a href="mailto:jody@hbcat.org ">Email Jody Love</a>
+                        <a href="mailto:jody@hbcat.org">Email Jody Love</a>
                       </Button>
                     )}
                   </CardContent>

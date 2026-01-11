@@ -1260,7 +1260,7 @@ function ContactPage() {
                                                         size: "sm",
                                                         className: "w-full bg-transparent",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                            href: "https://www.google.com/maps/search/Southeast+Kansas",
+                                                            href: "https://www.google.com/maps/place/104+N+National+Ave,+Fort+Scott,+KS+66701/@37.8430977,-94.7075429,17z/data=!3m1!4b1!4m6!3m5!1s0x87c7a0355c756f75:0x7e8fa52f2c2e809c!8m2!3d37.8430977!4d-94.7075429!16s%2Fg%2F11sghrjlqd?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoKLDEwMDc5MjA3MUgBUAM%3D",
                                                             target: "_blank",
                                                             rel: "noopener noreferrer",
                                                             className: "flex items-center justify-center gap-2",
