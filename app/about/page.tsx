@@ -83,7 +83,7 @@ export default function AboutPage() {
                 Our Vision
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                tronger rural communities, driven by local opportunity.
+                Stronger rural communities, driven by local opportunity.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed"></p>
             </div>
