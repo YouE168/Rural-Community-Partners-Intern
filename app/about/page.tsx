@@ -83,16 +83,9 @@ export default function AboutPage() {
                 Our Vision
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                We envision a Southeast Kansas where rural entrepreneurs have
-                access to the same resources, networks, and opportunities as
-                their urban counterparts. Where communities prosper through
-                diverse local economies and strong collaborative partnerships.
+                tronger rural communities, driven by local opportunity.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                A region where economic opportunity is broadly available, where
-                people choose to stay and build their futures, and where rural
-                communities are recognized as engines of innovation and growth.
-              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed"></p>
             </div>
           </div>
         </div>
