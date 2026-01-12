@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import FloatingSupportButton from "@/components/floating-support-button";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ruralcommunitypartners.org"), // Replace with your actual domain
+  metadataBase: new URL("https://ruralcommunitypartners.org"),
   title: "Rural Community Partners",
   description:
     "Supporting rural communities and entrepreneurs in Southeast Kansas through feasibility studies, technical assistance, mentorship, and community development.",
@@ -45,6 +46,7 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
+        <FloatingSupportButton />
       </body>
     </html>
   );
