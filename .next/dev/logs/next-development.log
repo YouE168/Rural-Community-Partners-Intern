@@ -1,14 +1,15 @@
-[00:00:00.628] Server  LOG      ✓ Ready in 430ms
-[00:00:05.132] Server  WARN    Image with src "/HomePage.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+[00:00:01.418] Server  LOG      ✓ Ready in 1213ms
+[00:00:04.986] Server  WARN    Image with src "/HomePage.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[00:00:05.183] Server  WARN     ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
-[00:00:05.544] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:05.682] Browser WARN    Image with src "/HomePage.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+[00:00:05.042] Server  WARN     ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
+[00:00:05.388] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:05.526] Browser WARN    Image with src "/HomePage.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[00:00:05.682] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:05.682] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:05.682] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1768154215988}
-[00:00:07.175] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/get-support color: rgb(120, 120, 120) color: inherit {"dp":"/get-support","o":"http://localhost:3000/get-support","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1768154217480}
-[00:00:11.058] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1768154221363}
-[00:00:58.062] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/get-support color: rgb(120, 120, 120) color: inherit {"dp":"/get-support","o":"http://localhost:3000/get-support","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1768154268357}
-[00:01:00.394] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1768154270701}
+[00:00:05.526] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:05.526] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:05.526] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1769617743186}
+[00:00:08.356] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/services color: rgb(120, 120, 120) color: inherit {"dp":"/services","o":"http://localhost:3000/services","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1769617746013}
+[00:00:18.547] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/services/technical-assistance color: rgb(120, 120, 120) color: inherit {"dp":"/services/technical-assistance","o":"http://localhost:3000/services/technical-assistance","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1769617756204}
+[00:00:25.654] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/get-support?service=feasibility color: rgb(120, 120, 120) color: inherit {"dp":"/get-support","o":"http://localhost:3000/get-support?service=feasibility","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1769617763313}
+[00:00:29.738] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/services/technical-assistance color: rgb(120, 120, 120) color: inherit {"dp":"/services/technical-assistance","o":"http://localhost:3000/services/technical-assistance","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1769617767394}
+[00:00:30.821] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/get-support?service=feasibility color: rgb(120, 120, 120) color: inherit {"dp":"/get-support","o":"http://localhost:3000/get-support?service=feasibility","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1769617768470}

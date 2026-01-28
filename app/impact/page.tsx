@@ -5,8 +5,16 @@ import Footer from "@/components/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { TrendingUp, Users, Building2, Award, ArrowRight } from "lucide-react";
+import { useEffect, useState, useRef } from "react";
+import {
+  TrendingUp,
+  Users,
+  Building2,
+  Award,
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 
 const impactStats = [
   { icon: Users, label: "Active Members", value: "100+" },
@@ -35,6 +43,25 @@ export default function ImpactPage() {
   const [substackPosts, setSubstackPosts] = useState<any[]>([]);
   const [loadingPosts, setLoadingPosts] = useState(true);
 
+  //right and left button
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 400;
+      const currentScroll = scrollContainerRef.current.scrollLeft;
+      const targetScroll =
+        direction === "left"
+          ? currentScroll - scrollAmount
+          : currentScroll + scrollAmount;
+
+      scrollContainerRef.current.scrollTo({
+        left: targetScroll,
+        behavior: "smooth",
+      });
+    }
+  };
+
   useEffect(() => {
     const fetchSubstackPosts = async () => {
       try {
@@ -50,17 +77,59 @@ export default function ImpactPage() {
         setSubstackPosts([
           {
             id: 1,
-            title: "Example: The Future of Rural Economic Development",
-            subtitle: "Trends and opportunities for Southeast Kansas",
-            url: "https://ruralcommunitypartners.substack.com",
-            post_date: "2024-12-01",
+            title: "From Backyard Pork Rinds to a Rural Revival",
+            subtitle: "Guest Expert: Kelly & Thaddeus Perry",
+            url: "https://open.substack.com/pub/ruralcommunitypartners/p/from-backyard-pork-rinds-to-a-rural?r=3n02bo&utm_campaign=post&utm_medium=web",
+            post_date: "2025-12-02",
           },
           {
-            id: 1,
-            title: "Title",
-            subtitle: "Sub-Title",
-            url: "https://ruralcommunitypartners.substack.com",
-            post_date: "Post Date",
+            id: 2,
+            title: "Bushel of Dreams",
+            subtitle: "Guest expert: Kelley Terlip & Michael Gringas",
+            url: "https://open.substack.com/pub/ruralcommunitypartners/p/bushel-of-dreams?r=3n02bo&utm_campaign=post&utm_medium=web",
+            post_date: "2025-09-11",
+          },
+          {
+            id: 3,
+            title: "Reach One Teach One",
+            subtitle: "Guest experts Mandy Monroy & Lee Reliford",
+            url: "https://open.substack.com/pub/ruralcommunitypartners/p/reach-one-teach-one?r=3n02bo&utm_campaign=post&utm_medium=web",
+            post_date: "2025-06-26",
+          },
+          {
+            id: 4,
+            title: "Bridging Language Gaps for Southeast Kansas",
+            subtitle: "Guest expert Blanca Lopez",
+            url: "https://open.substack.com/pub/ruralcommunitypartners/p/bridging-language-gaps-for-southeast?r=3n02bo&utm_campaign=post&utm_medium=web",
+            post_date: "2025-03-16",
+          },
+          {
+            id: 5,
+            title: "Turning Challenges Into Opportunity",
+            subtitle: "Guest expert Alex Barner",
+            url: "https://open.substack.com/pub/ruralcommunitypartners/p/turning-challenges-into-opportunity?r=3n02bo&utm_campaign=post&utm_medium=web",
+            post_date: "2025-01-14",
+          },
+          {
+            id: 6,
+            title: "Feeding Souls & Building Community",
+            subtitle: "Guest Expert Heather Horton",
+            url: "https://open.substack.com/pub/ruralcommunitypartners/p/feeding-souls-and-building-community?r=3n02bo&utm_campaign=post&utm_medium=web",
+            post_date: "2024-11-15",
+          },
+          {
+            id: 7,
+            title: "You were created to serve.",
+            subtitle: "Guest Expert Dr. Brianne Ford, PhD, RN",
+            url: "https://open.substack.com/pub/ruralcommunitypartners/p/you-were-created-to-serve?r=3n02bo&utm_campaign=post&utm_medium=web",
+            post_date: "2024-10-23",
+          },
+          {
+            id: 8,
+            title: "Using Passion and Skill to Uplift Diverse Communities",
+            subtitle: 'Guest expert: Cheryl "Nacy" Brown',
+            url: "https://open.substack.com/pub/ruralcommunitypartners/p/coming-soon?r=3n02bo&utm_campaign=post&utm_medium=web",
+            post_date: "2024-08-15",
           },
         ]);
       } finally {
@@ -136,8 +205,8 @@ export default function ImpactPage() {
                   idx % 3 === 0
                     ? "bg-gradient-to-br from-[#7BC04B]/90 to-[#659B3C]/90"
                     : idx % 3 === 1
-                    ? "bg-gradient-to-br from-[#FF9500]/90 to-[#E68600]/90"
-                    : "bg-gradient-to-br from-[#0EA5E9]/90 to-[#0C8FCC]/90"
+                      ? "bg-gradient-to-br from-[#FF9500]/90 to-[#E68600]/90"
+                      : "bg-gradient-to-br from-[#0EA5E9]/90 to-[#0C8FCC]/90"
                 }`}
               >
                 <div className="grid md:grid-cols-2 gap-0 min-h-[500px]">
@@ -269,60 +338,83 @@ export default function ImpactPage() {
               Stories, tips, and insights from our team and community
             </p>
           </div>
-
           {loadingPosts ? (
             <div className="text-center py-8">
               <p className="text-muted-foreground">Loading latest posts...</p>
             </div>
           ) : (
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              {substackPosts.slice(0, 3).map((post: any) => (
-                <Card
-                  key={post.id}
-                  className="hover:shadow-lg transition-shadow"
+            <>
+              <div className="relative">
+                {/* Left Arrow Button */}
+                <button
+                  onClick={() => scroll("left")}
+                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white hover:bg-gray-100 text-gray-800 rounded-full p-3 shadow-lg transition-all duration-200 hover:shadow-xl hidden md:block"
+                  aria-label="Scroll left"
                 >
-                  <CardHeader>
-                    <CardTitle className="text-foreground line-clamp-2">
-                      {post.title}
-                    </CardTitle>
-                    <p className="text-sm text-muted-foreground mt-2">
-                      {post.subtitle}
-                    </p>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs text-muted-foreground">
-                        {post.post_date
-                          ? new Date(post.post_date).toLocaleDateString()
-                          : "Recent"}
-                      </span>
-                      <Button variant="outline" size="sm" asChild>
-                        <a
-                          href={post.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Read More
-                        </a>
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                  <ChevronLeft className="h-6 w-6" />
+                </button>
+                {/* Right Arrow Button */}
+                <button
+                  onClick={() => scroll("right")}
+                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white hover:bg-gray-100 text-gray-800 rounded-full p-3 shadow-lg transition-all duration-200 hover:shadow-xl hidden md:block"
+                  aria-label="Scroll right"
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </button>
+                {/* Scrollable Container */}
+                <div
+                  ref={scrollContainerRef}
+                  className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-4"
+                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                >
+                  {substackPosts.map((post: any) => (
+                    <Card
+                      key={post.id}
+                      className="hover:shadow-lg transition-shadow flex-shrink-0 w-[calc(100%-2rem)] md:w-[calc(33.333%-1rem)]"
+                    >
+                      <CardHeader>
+                        <CardTitle className="text-foreground line-clamp-2">
+                          {post.title}
+                        </CardTitle>
+                        <p className="text-sm text-muted-foreground mt-2">
+                          {post.subtitle}
+                        </p>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-muted-foreground">
+                            {post.post_date
+                              ? new Date(post.post_date).toLocaleDateString()
+                              : "Recent"}
+                          </span>
+                          <Button variant="outline" size="sm" asChild>
+                            <a
+                              href={post.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Read More
+                            </a>
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+              <div className="text-center mt-8">
+                <Button asChild size="lg">
+                  <a
+                    href="https://ruralcommunitypartners.substack.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read All Articles on Substack
+                  </a>
+                </Button>
+              </div>
+            </>
           )}
-
-          <div className="text-center">
-            <Button asChild size="lg">
-              <a
-                href="https://ruralcommunitypartners.substack.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read All Articles on Substack
-              </a>
-            </Button>
-          </div>
         </div>
       </section>
 

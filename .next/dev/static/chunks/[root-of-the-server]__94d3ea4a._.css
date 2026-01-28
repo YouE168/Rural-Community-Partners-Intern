@@ -206,6 +206,8 @@
     --color-purple-600: #9810fa;
     --color-pink-600: #e30076;
     --color-rose-500: #ff2357;
+    --color-gray-100: #f3f4f6;
+    --color-gray-800: #1e2939;
     --color-gray-900: #101828;
     --color-black: #000;
     --color-white: #fff;
@@ -289,6 +291,8 @@
       --color-purple-600: lab(43.0295% 75.21 -86.5669);
       --color-pink-600: lab(49.5493% 79.8381 2.31768);
       --color-rose-500: lab(56.101% 79.4328 31.4532);
+      --color-gray-100: lab(96.1596% -.0823438 -1.13575);
+      --color-gray-800: lab(16.1051% -1.18239 -11.7533);
       --color-gray-900: lab(8.11897% .811279 -12.254);
     }
   }
@@ -657,6 +661,10 @@
     top: calc(var(--spacing) * 4);
   }
 
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
+
   .right-2 {
     right: calc(var(--spacing) * 2);
   }
@@ -1014,6 +1022,10 @@
     width: 340px;
   }
 
+  .w-\[calc\(100\%-2rem\)\] {
+    width: calc(100% - 2rem);
+  }
+
   .w-auto {
     width: auto;
   }
@@ -1076,6 +1088,16 @@
 
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+
+  .-translate-x-4 {
+    --tw-translate-x: calc(var(--spacing) * -4);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+
+  .translate-x-4 {
+    --tw-translate-x: calc(var(--spacing) * 4);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
 
@@ -1228,6 +1250,10 @@
 
   .overflow-y-auto {
     overflow-y: auto;
+  }
+
+  .scroll-smooth {
+    scroll-behavior: smooth;
   }
 
   .rounded {
@@ -2464,6 +2490,10 @@
     color: var(--foreground);
   }
 
+  .text-gray-800 {
+    color: var(--color-gray-800);
+  }
+
   .text-gray-900 {
     color: var(--color-gray-900);
   }
@@ -2732,6 +2762,11 @@
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
 
+  .duration-200 {
+    --tw-duration: .2s;
+    transition-duration: .2s;
+  }
+
   .duration-300 {
     --tw-duration: .3s;
     transition-duration: .3s;
@@ -2923,6 +2958,12 @@
       .hover\:bg-destructive\/90:hover {
         background-color: color-mix(in oklab, var(--destructive) 90%, transparent);
       }
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-gray-100:hover {
+      background-color: var(--color-gray-100);
     }
   }
 
@@ -3394,6 +3435,12 @@
   }
 
   @media (min-width: 48rem) {
+    .md\:block {
+      display: block;
+    }
+  }
+
+  @media (min-width: 48rem) {
     .md\:flex {
       display: flex;
     }
@@ -3414,6 +3461,12 @@
   @media (min-width: 48rem) {
     .md\:min-h-full {
       min-height: 100%;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:w-\[calc\(33\.333\%-1rem\)\] {
+      width: calc(33.333% - 1rem);
     }
   }
 

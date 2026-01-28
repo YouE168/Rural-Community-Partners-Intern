@@ -15,13 +15,16 @@ const serviceDetails = {
       "Whether you're in the ideation phase or looking to scale an existing business, our entrepreneurship support provides the guidance, resources, and mentorship you need to succeed.",
     highlights: [
       "Market Validation",
-      "Mentorship Matching & SEK Catalyst: Empowered by KU",
+      "Mentorship matching",
+      "SEK Catalyst: Empowered by KU",
       "KU School of Business Jayhawk Consulting",
       "KU School of Business Redtire Consulting",
-      "Financing Guidance",
-      "Training & Skills Development",
-      "Ongoing Accountability Support",
+      "Micro Grant Program (administered by SEK Small Business Entrepreneurship Council)",
+      "Access to financing resources and guidance",
+      "Training workshops and skill development",
+      "Ongoing support and accountability",
     ],
+
     process: [
       {
         step: 1,
