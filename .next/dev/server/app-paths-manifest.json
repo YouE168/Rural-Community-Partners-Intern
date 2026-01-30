@@ -1,6 +1,6 @@
 {
-  "/get-support/page": "app/get-support/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
-  "/services/page": "app/services/page.js",
-  "/services/technical-assistance/page": "app/services/technical-assistance/page.js"
+  "/programs/[slug]/page": "app/programs/[slug]/page.js",
+  "/programs/page": "app/programs/page.js"
 }

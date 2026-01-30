@@ -17,6 +17,7 @@ import {
   BarChart3,
   ChevronLeft,
   ChevronRight,
+  Wrench,
 } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 
@@ -54,7 +55,17 @@ const services = [
     iconBg: "bg-accent/20",
     iconColor: "text-accent",
   },
-
+  {
+    icon: Wrench,
+    title: "Technical Assistance",
+    description:
+      "Expert guidance to help your organization or project succeed with strategic planning, operations, and capacity building.",
+    href: "/services/technical-assistance",
+    bgColor: "from-primary/15 via-accent/10 to-primary/5",
+    borderColor: "border-primary/20",
+    iconBg: "bg-primary/20",
+    iconColor: "text-primary",
+  },
   {
     icon: Users,
     title: "Regional Initiatives",
@@ -79,7 +90,7 @@ export default function Services() {
 
     setShowLeftArrow(container.scrollLeft > 0);
     setShowRightArrow(
-      container.scrollLeft < container.scrollWidth - container.clientWidth - 10
+      container.scrollLeft < container.scrollWidth - container.clientWidth - 10,
     );
   };
 

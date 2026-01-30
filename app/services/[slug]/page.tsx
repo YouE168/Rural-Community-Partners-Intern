@@ -222,6 +222,51 @@ const serviceDetails = {
       },
     ],
   },
+
+  "technical-assistance": {
+    title: "Technical Assistance",
+    hero: "Expert Guidance for Your Success",
+    description:
+      "Expert guidance to help your organization or project succeed with strategic planning, operations, and capacity building.",
+    overview:
+      "We provide hands-on technical assistance to help organizations strengthen their operations, develop strategic plans, and build capacity for long-term success. Our team works closely with you to address specific challenges and implement effective solutions.",
+    highlights: [
+      "Strategic planning and roadmap development",
+      "Project management systems and support",
+      "Operations and efficiency improvement",
+      "Technology implementation guidance",
+      "Capacity building and skill development",
+      "Process optimization and workflow design",
+      "Organizational development support",
+      "Problem-solving for specific challenges",
+    ],
+    process: [
+      {
+        step: 1,
+        title: "Initial Assessment",
+        description:
+          "We evaluate your current situation, challenges, and organizational needs.",
+      },
+      {
+        step: 2,
+        title: "Customized Plan",
+        description:
+          "Develop a tailored technical assistance plan aligned with your goals.",
+      },
+      {
+        step: 3,
+        title: "Implementation Support",
+        description:
+          "Hands-on guidance as you implement solutions and build new systems.",
+      },
+      {
+        step: 4,
+        title: "Ongoing Guidance",
+        description:
+          "Continue support to ensure sustainable success and address emerging needs.",
+      },
+    ],
+  },
 };
 
 type ServiceSlug = keyof typeof serviceDetails;
