@@ -157,7 +157,7 @@ const lheatProjects = allLheatProjects.filter((project) =>
     "Crawford County",
     "Labette County",
     "Montgomery County",
-  ].includes(project.county)
+  ].includes(project.county),
 );
 
 // Program details object
@@ -222,7 +222,7 @@ const programDetails: {
         image: "/Blanca-headshot.jpg",
       },
       {
-        name: "Nancy Brown",
+        name: "Nacy Brown",
         business: "",
         icon: "👤",
         image: "/NacyBrown-headshot.jpg",
@@ -466,12 +466,12 @@ export default async function ProgramDetailPage({ params }: PageProps) {
                 {slug === "entrepreneur-council"
                   ? "Meet Our Council Members"
                   : slug === "mentorship"
-                  ? "Connect with Our Mentors"
-                  : slug === "local-action-teams"
-                  ? "Active Local Action Teams"
-                  : slug === "board-members"
-                  ? "Meet Our Board"
-                  : "Team Members"}
+                    ? "Connect with Our Mentors"
+                    : slug === "local-action-teams"
+                      ? "Active Local Action Teams"
+                      : slug === "board-members"
+                        ? "Meet Our Board"
+                        : "Team Members"}
               </h3>
               {slug === "entrepreneur-council" && (
                 <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -512,12 +512,12 @@ export default async function ProgramDetailPage({ params }: PageProps) {
                             {slug === "entrepreneur-council"
                               ? "Council Member"
                               : slug === "mentorship"
-                              ? "Mentor"
-                              : slug === "local-action-teams"
-                              ? "Team Leader"
-                              : slug === "board-members"
-                              ? "Board Member"
-                              : "Member"}
+                                ? "Mentor"
+                                : slug === "local-action-teams"
+                                  ? "Team Leader"
+                                  : slug === "board-members"
+                                    ? "Board Member"
+                                    : "Member"}
                           </div>
                         </div>
                       ) : (
@@ -538,10 +538,10 @@ export default async function ProgramDetailPage({ params }: PageProps) {
                       {"business" in member
                         ? member.business
                         : "expertise" in member
-                        ? member.expertise
-                        : "community" in member
-                        ? member.community
-                        : ""}
+                          ? member.expertise
+                          : "community" in member
+                            ? member.community
+                            : ""}
                     </p>
                   </CardContent>
                 </Card>
@@ -765,12 +765,12 @@ export default async function ProgramDetailPage({ params }: PageProps) {
             {slug === "entrepreneur-council"
               ? "Why Join the Council?"
               : slug === "mentorship"
-              ? "Why Join Our Program?"
-              : slug === "local-action-teams"
-              ? "Why Join a Team?"
-              : slug === "board-members"
-              ? "Board Responsibilities"
-              : "Program Benefits"}
+                ? "Why Join Our Program?"
+                : slug === "local-action-teams"
+                  ? "Why Join a Team?"
+                  : slug === "board-members"
+                    ? "Board Responsibilities"
+                    : "Program Benefits"}
           </h3>
           <div className="grid md:grid-cols-2 gap-4">
             {program.benefits.map((benefit, idx) => (
@@ -797,10 +797,10 @@ export default async function ProgramDetailPage({ params }: PageProps) {
               {slug === "mentorship"
                 ? "Getting matched with a mentor is simple. Here's how to begin your journey."
                 : slug === "local-action-teams"
-                ? "Starting a Local Action Team in your community is straightforward. Here's the process."
-                : slug === "board-members"
-                ? "Joining our Board of Directors involves a nomination and selection process. Here's how it works."
-                : "Getting involved is easy. Follow these simple steps."}
+                  ? "Starting a Local Action Team in your community is straightforward. Here's the process."
+                  : slug === "board-members"
+                    ? "Joining our Board of Directors involves a nomination and selection process. Here's how it works."
+                    : "Getting involved is easy. Follow these simple steps."}
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {[
